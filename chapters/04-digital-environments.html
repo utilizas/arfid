@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Digital soil: social platforms, recommender systems and ARFID – Beyond Body Image</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/05-generative-ai-protocol.html" rel="next">
+<link href="../chapters/03-genes-environment.html" rel="prev">
+<link href="../assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-87594f40d5751d395fd74f8deb6194b2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap">
+<meta name="theme-color" content="#1F5F74">
+<script>
+/* PNG favicons, resolved against Quarto's page offset so they work in sub-folders and offline. */
+document.addEventListener('DOMContentLoaded', function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var off = m ? m.getAttribute('content') : './';
+  [['icon', 'image/png', '32x32', 'favicon-32.png'],
+   ['icon', 'image/png', '192x192', 'favicon-192.png'],
+   ['apple-touch-icon', 'image/png', '180x180', 'apple-touch-icon.png']].forEach(function (d) {
+    var l = document.createElement('link');
+    l.rel = d[0]; l.type = d[1]; l.setAttribute('sizes', d[2]); l.href = off + 'assets/icons/' + d[3];
+    document.head.appendChild(l);
+  });
+});
+</script>
+<script>
+/* Apply the stored reading preferences before first paint (avoids a flash of the light theme). */
+(function () {
+  var theme = null, scale = null;
+  try { theme = localStorage.getItem('rd-theme'); scale = localStorage.getItem('rd-scale'); } catch (e) {}
+  if (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+  var root = document.documentElement;
+  root.setAttribute('data-reading', theme === 'dark' || theme === 'sepia' ? theme : 'light');
+  var s = parseFloat(scale);
+  if (s >= 0.85 && s <= 1.45) root.style.setProperty('--rd-scale', String(s));
+})();
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-digital-environments.html">Part II · Digital environments and generative AI</a></li><li class="breadcrumb-item"><a href="../chapters/04-digital-environments.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Digital soil: social platforms, recommender systems and ARFID</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Beyond Body Image</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worried.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">If you are worried · Si te preocupa</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I · The landscape</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-context-prevalence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Counting a moving target: context and prevalence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-related-disorders.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A family of difficulties: related disorders, ages and groups</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-genes-environment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Seed and soil: genetic and environmental determinants</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II · Digital environments and generative AI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-digital-environments.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Digital soil: social platforms, recommender systems and ARFID</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-generative-ai-protocol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Scribe, not judge: generative AI for early recognition and referral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../toolkit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interactive toolkit</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../epilogue.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Epilogue: seeing what the frame leaves out</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Glossary · Glosario</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-ch4-established" id="toc-sec-ch4-established" class="nav-link active" data-scroll-target="#sec-ch4-established"><span class="header-section-number">4.1</span> What is established: the body-image pathway</a>
+  <ul class="collapse">
+  <li><a href="#sec-ch4-size" id="toc-sec-ch4-size" class="nav-link" data-scroll-target="#sec-ch4-size">Associations and their size</a></li>
+  <li><a href="#sec-ch4-content" id="toc-sec-ch4-content" class="nav-link" data-scroll-target="#sec-ch4-content">Content matters more than time</a></li>
+  <li><a href="#sec-ch4-within" id="toc-sec-ch4-within" class="nav-link" data-scroll-target="#sec-ch4-within">Within-person evidence and causal tests</a></li>
+  <li><a href="#sec-ch4-platforms" id="toc-sec-ch4-platforms" class="nav-link" data-scroll-target="#sec-ch4-platforms">What platforms deliver</a></li>
+  </ul></li>
+  <li><a href="#sec-ch4-outside" id="toc-sec-ch4-outside" class="nav-link" data-scroll-target="#sec-ch4-outside"><span class="header-section-number">4.2</span> Why ARFID falls outside that evidence</a>
+  <ul class="collapse">
+  <li><a href="#sec-ch4-exclusion" id="toc-sec-ch4-exclusion" class="nav-link" data-scroll-target="#sec-ch4-exclusion">A definitional exclusion</a></li>
+  <li><a href="#sec-ch4-bibliometric" id="toc-sec-ch4-bibliometric" class="nav-link" data-scroll-target="#sec-ch4-bibliometric">How little light: a bibliometric check</a></li>
+  </ul></li>
+  <li><a href="#sec-ch4-pathways" id="toc-sec-ch4-pathways" class="nav-link" data-scroll-target="#sec-ch4-pathways"><span class="header-section-number">4.3</span> Candidate digital pathways</a>
+  <ul class="collapse">
+  <li><a href="#sec-ch4-fear" id="toc-sec-ch4-fear" class="nav-link" data-scroll-target="#sec-ch4-fear">Vicarious aversive content and fear learning</a></li>
+  <li><a href="#sec-ch4-gut" id="toc-sec-ch4-gut" class="nav-link" data-scroll-target="#sec-ch4-gut">Gut-health, elimination diets and wellness advice</a></li>
+  <li><a href="#sec-ch4-orthorexia" id="toc-sec-ch4-orthorexia" class="nav-link" data-scroll-target="#sec-ch4-orthorexia">“Clean eating” and orthorexic ideals</a></li>
+  <li><a href="#sec-ch4-identity" id="toc-sec-ch4-identity" class="nav-link" data-scroll-target="#sec-ch4-identity">Diagnostic identity and online communities</a></li>
+  <li><a href="#sec-ch4-overshadowing" id="toc-sec-ch4-overshadowing" class="nav-link" data-scroll-target="#sec-ch4-overshadowing">Diagnostic overshadowing, human and algorithmic</a></li>
+  <li><a href="#sec-ch4-bubble" id="toc-sec-ch4-bubble" class="nav-link" data-scroll-target="#sec-ch4-bubble">Recommender amplification and the “bubble” effect</a></li>
+  <li><a href="#sec-ch4-parents" id="toc-sec-ch4-parents" class="nav-link" data-scroll-target="#sec-ch4-parents">The parental information environment</a></li>
+  </ul></li>
+  <li><a href="#sec-ch4-measurement" id="toc-sec-ch4-measurement" class="nav-link" data-scroll-target="#sec-ch4-measurement"><span class="header-section-number">4.4</span> Measuring digital exposure</a></li>
+  <li><a href="#sec-ch4-governance" id="toc-sec-ch4-governance" class="nav-link" data-scroll-target="#sec-ch4-governance"><span class="header-section-number">4.5</span> Governance: bans, design duties and the category problem</a></li>
+  <li><a href="#sec-ch4-agenda" id="toc-sec-ch4-agenda" class="nav-link" data-scroll-target="#sec-ch4-agenda"><span class="header-section-number">4.6</span> A research agenda</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-digital-environments.html">Part II · Digital environments and generative AI</a></li><li class="breadcrumb-item"><a href="../chapters/04-digital-environments.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Digital soil: social platforms, recommender systems and ARFID</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch4" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Digital soil: social platforms, recommender systems and ARFID</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>In plain words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is good evidence that some kinds of social media content (idealised bodies, “fitspiration”, weight-loss advice) can make young people feel worse about their bodies and are linked with eating-disorder symptoms. There is also evidence that recommendation systems show more of that content to young people who are already struggling. ARFID is different. It is not driven by body image, and almost no research has asked how online life might affect it. This chapter keeps what is known apart from what is only plausible. It suggests that for ARFID the useful questions are less about how young people look and more about what they learn to fear, what they are told to avoid, and how the adults around them are advised to respond.</p>
+</div>
+</div>
+<p>There is an old story about a man searching for his keys under a streetlamp. Asked whether he dropped them there, he says no, he dropped them in the park, but this is where the light is. Research on digital media and eating disorders has a streetlamp problem. Two decades of work have lit up one pathway thoroughly: from idealised images, through social comparison and the internalisation of appearance ideals, to body dissatisfaction and disordered eating. That pathway is real and well documented, and <a href="#sec-ch4-established" class="quarto-xref"><span>Section 4.1</span></a> reviews it. But it was mapped for disorders defined by concern about weight and shape, and ARFID is defined by the absence of that concern <span class="citation" data-cites="apa2022dsm5tr">(<a href="../references.html#ref-apa2022dsm5tr" role="doc-biblioref">American Psychiatric Association, 2022</a>)</span>. If digital environments matter for ARFID, the keys are probably somewhere else.</p>
+<p>The chapter proceeds in six steps. <a href="#sec-ch4-established" class="quarto-xref"><span>Section 4.1</span></a> summarises the evidence on the body-image pathway, including what platforms themselves deliver to young users. <a href="#sec-ch4-outside" class="quarto-xref"><span>Section 4.2</span></a> explains why that evidence does not transfer to ARFID and measures, with a reproducible bibliometric check, how little light falls on it. <a href="#sec-ch4-pathways" class="quarto-xref"><span>Section 4.3</span></a> sets out seven candidate digital pathways as testable hypotheses and grades each, using a small simulation to make one mechanism concrete. <a href="#sec-ch4-measurement" class="quarto-xref"><span>Section 4.4</span></a> asks how digital exposure can be measured, <a href="#sec-ch4-governance" class="quarto-xref"><span>Section 4.5</span></a> asks what current regulation does and does not reach, and <a href="#sec-ch4-agenda" class="quarto-xref"><span>Section 4.6</span></a> proposes a research agenda. Throughout, the working model of <a href="03-genes-environment.html#sec-ch3-model" class="quarto-xref"><span>Section 3.8</span></a> provides the frame: digital environments are unlikely to alter the largely genetic liability layer, so if they matter for ARFID they will act as triggers and as maintaining loops.</p>
+<section id="sec-ch4-established" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-ch4-established"><span class="header-section-number">4.1</span> What is established: the body-image pathway</h2>
+<section id="sec-ch4-size" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-size">Associations and their size</h3>
+<p>The first systematic review of social networking sites and eating outcomes identified 20 studies and concluded that use of these sites was associated with body-image concern and disordered eating. Photo-related activities were singled out as particularly problematic, and in the few studies that examined process, appearance-based social comparison mediated the association. Nearly all the evidence was correlational <span class="citation" data-cites="holland2016systematic">(<a href="../references.html#ref-holland2016systematic" role="doc-biblioref">Holland &amp; Tiggemann, 2016</a>)</span>. Later reviews broadened the picture without overturning it. A scoping review of 50 studies from 17 countries, covering people aged 10–24 and published between 2016 and 2021, found consistent links running through social comparison, internalisation of thin or fit ideals and self-objectification, strengthened by pro-eating-disorder content and appearance-focused platforms. Of its 45 quantitative studies, however, 30 were cross-sectional and only two were longitudinal <span class="citation" data-cites="dane2023social">(<a href="../references.html#ref-dane2023social" role="doc-biblioref">Dane &amp; Bhatia, 2023</a>)</span>. A review restricted to preadolescents and adolescents (16 studies) reached a similar conclusion and noted the same reliance on cross-sectional self-report <span class="citation" data-cites="digennaro2024scrolls">(<a href="../references.html#ref-digennaro2024scrolls" role="doc-biblioref">Digennaro &amp; Tescione, 2024</a>)</span>.</p>
+<p>Meta-analyses put numbers on these associations, and the pattern of the numbers is instructive (<a href="#tbl-ch4-established" class="quarto-xref">Table&nbsp;<span>4.1</span></a>). Across 22 studies contributing 87 effect sizes, the correlation between use of social networking sites and disordered eating behaviours was small (r = 0.09) <span class="citation" data-cites="zhang2021relationship">(<a href="../references.html#ref-zhang2021relationship" role="doc-biblioref">Zhang et al., 2021</a>)</span>. Problematic use of the internet, which measures compulsive or impairing use rather than time, correlated more strongly with eating-disorder psychopathology (r = 0.22 in 32,295 participants), and the association was not moderated by gender <span class="citation" data-cites="ioannidis2021problematic">(<a href="../references.html#ref-ioannidis2021problematic" role="doc-biblioref">Ioannidis et al., 2021</a>)</span>. The strongest associations concern a psychological process rather than an exposure: across 83 studies and 55,440 participants, online social comparison correlated r = 0.45 with body-image concern and r = 0.36 with eating-disorder symptoms <span class="citation" data-cites="bonfanti2025association">(<a href="../references.html#ref-bonfanti2025association" role="doc-biblioref">Bonfanti et al., 2025</a>)</span>.</p>
+<p>The gradient, small for time and moderate for process, is the first lesson of this literature. How wet one gets depends less on the hours spent outdoors than on whether one is standing under the gutter.</p>
+</section>
+<section id="sec-ch4-content" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-content">Content matters more than time</h3>
+<p>Studies that separate what young people see from how long they spend online support the same conclusion. In two demographically diverse cohorts of undergraduates surveyed in 2015 and 2022, the type of content consumed, but not the time spent on social media or the number of platforms used, was associated with body-image disturbance and disordered eating once gender and body mass index were taken into account. Exposure to weight-loss content was associated with lower body appreciation, greater fear of negative appearance evaluation and more frequent binge eating; contrary to the authors’ hypothesis, body-positivity and body-neutrality content was not protective <span class="citation" data-cites="sanzari2023impact">(<a href="../references.html#ref-sanzari2023impact" role="doc-biblioref">Sanzari et al., 2023</a>)</span>.</p>
+<p>Experimental studies isolate content effects more cleanly. A systematic review of 43 experiments (N = 8,637; 89.6% female; mean age 21.6) found that viewing idealised images on social networking sites increased body dissatisfaction, that comparison made while viewing mediated the effect, and that a stable tendency to compare oneself with others moderated it; only two of the experiments involved adolescents <span class="citation" data-cites="fioravanti2022exposure">(<a href="../references.html#ref-fioravanti2022exposure" role="doc-biblioref">Fioravanti et al., 2022</a>)</span>. In a systematic review of “fitspiration” content, 17 of the 19 studies that examined body image found that exposure increased body dissatisfaction <span class="citation" data-cites="jeronimo2022effects">(<a href="../references.html#ref-jeronimo2022effects" role="doc-biblioref">Jerónimo &amp; Carraça, 2022</a>)</span>. In a randomised online experiment with women with (n = 172) and without (n = 210) eating disorders, 30 Instagram posts of fitspiration increased body dissatisfaction, whereas body-positive posts and text-based “body neutrality” posts reduced it; the effects did not differ between the two groups <span class="citation" data-cites="ladwig2024risks">(<a href="../references.html#ref-ladwig2024risks" role="doc-biblioref">Ladwig et al., 2024</a>)</span>. Side-by-side “Instagram vs reality” images reduced body dissatisfaction in 305 women aged 18–30 relative to idealised images alone, and blunted the effect of appearance comparison <span class="citation" data-cites="tiggemann2020social">(<a href="../references.html#ref-tiggemann2020social" role="doc-biblioref">Tiggemann &amp; Anderberg, 2020</a>)</span>. A systematic review and meta-analysis of 56 studies concluded that body-positive content improves body satisfaction and mood in the short term, with weaker effects on body surveillance and social comparison <span class="citation" data-cites="jimenezgarcia2025impact">(<a href="../references.html#ref-jimenezgarcia2025impact" role="doc-biblioref">Jiménez-García et al., 2025</a>)</span>.</p>
+<p>Individual differences shape these effects. In 1,153 adolescents (55.4% boys; mean age 13.7), internalisation of the thin ideal was the only variable associated with body dissatisfaction in both sexes once other factors were considered, and among boys internalisation of a muscular ideal moderated the link with social media: for boys who had strongly internalised that ideal, more use went with greater dissatisfaction <span class="citation" data-cites="vuong2021social">(<a href="../references.html#ref-vuong2021social" role="doc-biblioref">Vuong et al., 2021</a>)</span>. Among 246 early-adolescent girls, media literacy, particularly critical thinking about media, buffered the effects of thin-ideal internalisation and habitual upward comparison on body satisfaction after exposure to thin-ideal images <span class="citation" data-cites="mclean2016does">(<a href="../references.html#ref-mclean2016does" role="doc-biblioref">McLean et al., 2016</a>)</span>.</p>
+<p>A smaller literature concerns content about food rather than bodies. A systematic review of 38 studies found positive associations between exposure to some eating-related content (fast-food advertising, “clean eating” and eating videos) and body-image concern, disordered eating and consumption, but no such association for “healthy food” content; viewers expressed mixed feelings about nutrition information and <em>mukbang</em> videos, in which hosts eat large quantities of food on camera <span class="citation" data-cites="wu2024digging">(<a href="../references.html#ref-wu2024digging" role="doc-biblioref">Wu et al., 2024</a>)</span>. A content analysis of 250 TikTok videos from the five most popular diet-related hashtags found that more than half depicted body checking and more than half offered dietary advice. Most of the advice-givers (64%) presented themselves as experts, but claimed expertise was not associated with engagement; humour was. Only 6.4% of videos depicted disordered eating behaviours outright <span class="citation" data-cites="munro2024diet">(<a href="../references.html#ref-munro2024diet" role="doc-biblioref">Munro et al., 2024</a>)</span>. The point for this book is that a large share of food content online is advice: confident, personal and often unqualified.</p>
+</section>
+<section id="sec-ch4-within" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-within">Within-person evidence and causal tests</h3>
+<p>Most of the evidence above compares people with one another. Two longitudinal studies that separated between-person from within-person effects in adolescents complicate the picture. In a three-wave panel of 2,500 Czech adolescents aged 11–16, adolescents who were more active around appearance on social media were more dissatisfied with their bodies, but increases in an individual’s appearance activity did not predict increases in that individual’s body dissatisfaction six months later, and neither internalisation nor comparison mediated the link within persons <span class="citation" data-cites="kvardova2025navigating">(<a href="../references.html#ref-kvardova2025navigating" role="doc-biblioref">Kvardova et al., 2025</a>)</span>. In another within-person study of adolescents, increased posting predicted <em>lower</em> body dissatisfaction four months later in one interval only, increased exposure predicted lower dissatisfaction among boys, and liking or commenting predicted nothing <span class="citation" data-cites="schreurs2022different">(<a href="../references.html#ref-schreurs2022different" role="doc-biblioref">Schreurs &amp; Vandenbosch, 2022</a>)</span>. These findings do not cancel the experimental evidence for short-term effects. They do caution against reading population correlations as descriptions of what happens inside each adolescent, the same distinction between populations and individuals that <a href="03-genes-environment.html#sec-ch3-misreadings" class="quarto-xref"><span>Section 3.1.3</span></a> drew for heritability.</p>
+<p>Causal tests of reducing use are now accumulating. Meta-analyses of randomised trials in which participants were asked to stop using social media for a period have found modest benefits for mental health in adults and adolescents <span class="citation" data-cites="vanderlinden2026social">(<a href="../references.html#ref-vanderlinden2026social" role="doc-biblioref">Linden, 2026</a>)</span>. A recent study of young adults aged 18–24 illustrates both the promise and the limits of this evidence: among 295 participants who opted into a one-week “detox”, symptoms of depression fell by 24.8%, anxiety by 16.1% and insomnia by 14.5%, while loneliness did not change; but participation was optional and there was no control group, so expectation effects and regression to the mean cannot be excluded <span class="citation" data-cites="calvert2025social">(<a href="../references.html#ref-calvert2025social" role="doc-biblioref">Calvert et al., 2025</a>)</span>. Eating outcomes were not measured.</p>
+</section>
+<section id="sec-ch4-platforms" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-platforms">What platforms deliver</h3>
+<p>Studies of users measure what people report seeing. A second body of evidence examines what platforms deliver, and most of it comes from audits by advocacy organisations, investigative journalism and leaked or disclosed company documents. These sources call for explicit appraisal, and they are graded here accordingly.</p>
+<p>In the <em>Deadly by Design</em> audit, researchers created two new TikTok accounts registered as 13-year-olds in each of the United States, the United Kingdom, Australia and Canada. One account in each pair had a username containing “loseweight”. All accounts paused on and liked videos about body image and mental health, and the first 30 minutes of each “For You” feed were recorded. Eating-disorder content appeared within eight minutes at the earliest, and body-image or mental-health content was recommended every 39 seconds. The report’s headline finding was that the “vulnerable” accounts were shown three times as many harmful videos and twelve times as many self-harm videos as the standard accounts <span class="citation" data-cites="ccdh2022deadly">(<a href="../references.html#ref-ccdh2022deadly" role="doc-biblioref">Center for Countering Digital Hate, 2022</a>)</span>. The report’s own tables show that the threefold difference was driven by self-harm and suicide content (74 videos against 6); for eating-disorder videos the difference was small (35 against 29). The distinction matters for what follows.</p>
+<p>A later audit of YouTube used an account set up as a 13-year-old girl in the United States, seeded with 100 eating-disorder videos found through 20 search terms, and recorded the top ten “Up Next” recommendations in 100 separate simulations. Of the 1,000 recommendations, 638 concerned eating disorders or weight loss, 344 were classified as harmful eating-disorder content and 50 concerned self-harm or suicide; the harmful videos averaged more than 388,000 views each, and YouTube took no action on 81 of 100 such videos that the researchers reported <span class="citation" data-cites="ccdh2024youtube">(<a href="../references.html#ref-ccdh2024youtube" role="doc-biblioref">Center for Countering Digital Hate, 2024</a>)</span>. On Pinterest, a single click on a pin about <em>recovery</em> from an eating disorder was enough, in each of ten fresh test accounts, for four to eight of the first 25 pins in the home feed to concern weight loss or eating disorders <span class="citation" data-cites="golbeck2025recommender">(<a href="../references.html#ref-golbeck2025recommender" role="doc-biblioref">Golbeck, 2025</a>)</span>. For recommenders, seeking recovery and seeking the disorder can look alike. A follower-network analysis of Instagram by Reset Australia mapped a “bubble” of pro-eating-disorder accounts <span class="citation" data-cites="resetaustralia2022designing">(<a href="../references.html#ref-resetaustralia2022designing" role="doc-biblioref">Reset Australia, 2022</a>)</span>, which other researchers have summarised as reaching some 20 million unique followers <span class="citation" data-cites="ccdh2022deadly">(<a href="../references.html#ref-ccdh2022deadly" role="doc-biblioref">Center for Countering Digital Hate, 2022</a>)</span>. A legal analysis also describes a newspaper investigation in which a dozen automated accounts registered as 13-year-olds were served tens of thousands of weight-loss videos within a few weeks <span class="citation" data-cites="costello2023algorithms">(<a href="../references.html#ref-costello2023algorithms" role="doc-biblioref">Costello et al., 2023</a>)</span>.</p>
+<p>The most informative single document comes from inside a platform. In an internal study disclosed in 2025, Meta followed 1,149 teenagers in the United States through the 2023–2024 school year and manually reviewed random samples of the content they were shown over three months. For the 223 teenagers who reported frequently feeling bad about their bodies after using Instagram, content the company labelled body-focused or “eating-disorder adjacent” made up 10.5% of what they saw, against 3.3% for the 795 other teenagers in the comparison. A broader class of content that Meta’s advisers had supported limiting made up 27.3% and 13.6% respectively <span class="citation" data-cites="horwitz2025instagram meta2024people">(<a href="../references.html#ref-horwitz2025instagram" role="doc-biblioref">Horwitz, 2025b</a>; <a href="../references.html#ref-meta2024people" role="doc-biblioref">Meta Platforms, 2024</a>)</span>. Only three of the flagged pieces in either group scored above a low threshold on the company’s existing integrity classifiers, which had been built to detect policy violations rather than this kind of material <span class="citation" data-cites="meta2024people">(<a href="../references.html#ref-meta2024people" role="doc-biblioref">Meta Platforms, 2024</a>)</span>. The authors stated that the causal direction could not be established: teenagers who felt bad about their bodies may have sought such content out <span class="citation" data-cites="horwitz2025instagram">(<a href="../references.html#ref-horwitz2025instagram" role="doc-biblioref">Horwitz, 2025b</a>)</span>. A separate report by child-safety organisations, reviewed by researchers at Northeastern University, judged only 8 of 47 Instagram teen-safety features to be fully effective; Meta disputed the findings <span class="citation" data-cites="horwitz2025safety">(<a href="../references.html#ref-horwitz2025safety" role="doc-biblioref">Horwitz, 2025a</a>)</span>.</p>
+<p><a href="#fig-ch4-gradients" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> sets the two sources that compare groups side by side.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-ch4-gradients" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ch4-gradients-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-digital-environments_files/figure-html/fig-ch4-gradients-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1640">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ch4-gradients-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Exposure gradients: how much more of each content category was delivered to ‘vulnerable’ users than to comparison users in two sources. Points show the ratio of the two values (logarithmic scale); labels give the underlying figures. In the TikTok audit, vulnerability was signalled by a username containing ‘loseweight’ and all accounts behaved identically; in the Instagram study, groups were defined by teenagers’ own reports of frequent body dissatisfaction, so causal direction cannot be inferred. The ratios are descriptive, not estimates of harm.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>These sources share well-known weaknesses. Audits use few accounts and short observation windows; classifications are made by the organisations’ own researchers (in the YouTube audit, each decision was agreed by at least two of them); the organisations campaign on the issues they study; and platforms change their systems continually, so findings are dated snapshots. None of the figures is a prevalence estimate. Yet the audits establish something that surveys of users cannot: <em>conditional delivery</em>, the fact that a signal of interest or vulnerability changes what the system serves. The internal Meta study adds the platform’s own measurement, with an appropriately cautious reading of causal direction. Taken together, the evidence supports, at grade <span class="ev ev-e2">E2</span>, the claim that recommender systems deliver more eating-disorder-relevant content to young users who signal interest or vulnerability. Whether that delivery causes the onset of an eating disorder remains <span class="ev ev-h">H</span>.</p>
+<p>The same platforms also offer support. For adolescents with eating disorders, social media has been described as a double-edged sword: a source of connection, information and recovery communities, and also of triggers, comparison and “thinspiration” <span class="citation" data-cites="nawaz2024social">(<a href="../references.html#ref-nawaz2024social" role="doc-biblioref">Nawaz et al., 2024</a>)</span>. Because adolescents are unlikely to stop using these platforms, reviews of mitigation strategies argue that harm reduction has to work within them <span class="citation" data-cites="mazzeo2024mitigating">(<a href="../references.html#ref-mazzeo2024mitigating" role="doc-biblioref">Mazzeo et al., 2024</a>)</span>. A case report describes how videos meant to warn against anorexia (labelled “anti-pro-ana”) led an adolescent to imitate the behaviours they depicted <span class="citation" data-cites="logrieco2021paradox">(<a href="../references.html#ref-logrieco2021paradox" role="doc-biblioref">Logrieco et al., 2021</a>)</span>. In Spain, a small cross-sectional study of 115 students aged 12–17 at one school in Córdoba classified 43.5% as at risk of an eating disorder and found that more hours of social media use were associated with higher risk (odds ratio 5.54) <span class="citation" data-cites="perezjimenez2025social">(<a href="../references.html#ref-perezjimenez2025social" role="doc-biblioref">Peréz-Jiménez et al., 2025</a>)</span>. The design does not allow causal inference, but it is a reminder that the question is also being asked locally.</p>
+<div id="tbl-ch4-established" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ch4-established-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.1: The body-image pathway: a synthesis of the evidence on social media, body image and disordered eating. Grades: E1 systematic or meta-analytic; E2 several consistent primary studies; E3 single studies, case reports or cross-sectional associations; H hypothesis only.
+</figcaption>
+<div aria-describedby="tbl-ch4-established-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Source</th>
+<th style="text-align: left;">Design and sample</th>
+<th style="text-align: left;">Main finding</th>
+<th style="text-align: left;">Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="holland2016systematic">Holland &amp; Tiggemann (<a href="../references.html#ref-holland2016systematic" role="doc-biblioref">2016</a>)</span></td>
+<td style="text-align: left;">Systematic review; 20 studies</td>
+<td style="text-align: left;">Social networking use associated with body-image concern and disordered eating; photo activities and appearance comparison implicated</td>
+<td style="text-align: left;"><span class="ev ev-e1">E1</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="dane2023social">Dane &amp; Bhatia (<a href="../references.html#ref-dane2023social" role="doc-biblioref">2023</a>)</span></td>
+<td style="text-align: left;">Scoping review; 50 studies, 17 countries, ages 10–24</td>
+<td style="text-align: left;">Pathways via comparison, ideal internalisation and self-objectification; 30 of 45 quantitative studies cross-sectional</td>
+<td style="text-align: left;"><span class="ev ev-e1">E1</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="zhang2021relationship">Zhang et al. (<a href="../references.html#ref-zhang2021relationship" role="doc-biblioref">2021</a>)</span></td>
+<td style="text-align: left;">Meta-analysis; 22 studies, 87 effect sizes</td>
+<td style="text-align: left;">Use of social networking sites and disordered eating: r = 0.09</td>
+<td style="text-align: left;"><span class="ev ev-e1">E1</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="ioannidis2021problematic">Ioannidis et al. (<a href="../references.html#ref-ioannidis2021problematic" role="doc-biblioref">2021</a>)</span></td>
+<td style="text-align: left;">Meta-analysis; n = 32,295</td>
+<td style="text-align: left;">Problematic internet use and eating-disorder psychopathology: r = 0.22</td>
+<td style="text-align: left;"><span class="ev ev-e1">E1</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="bonfanti2025association">Bonfanti et al. (<a href="../references.html#ref-bonfanti2025association" role="doc-biblioref">2025</a>)</span></td>
+<td style="text-align: left;">Meta-analysis; 83 studies, n = 55,440</td>
+<td style="text-align: left;">Online social comparison: r = 0.45 with body-image concern, r = 0.36 with eating-disorder symptoms</td>
+<td style="text-align: left;"><span class="ev ev-e1">E1</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="fioravanti2022exposure">Fioravanti et al. (<a href="../references.html#ref-fioravanti2022exposure" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="jeronimo2022effects">Jerónimo &amp; Carraça (<a href="../references.html#ref-jeronimo2022effects" role="doc-biblioref">2022</a>)</span></td>
+<td style="text-align: left;">Systematic reviews of experiments; 43 and 20 studies</td>
+<td style="text-align: left;">Idealised and fitspiration images increase body dissatisfaction in the short term</td>
+<td style="text-align: left;"><span class="ev ev-e1">E1</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="jimenezgarcia2025impact">Jiménez-García et al. (<a href="../references.html#ref-jimenezgarcia2025impact" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="tiggemann2020social">Tiggemann &amp; Anderberg (<a href="../references.html#ref-tiggemann2020social" role="doc-biblioref">2020</a>)</span>; <span class="citation" data-cites="ladwig2024risks">Ladwig et al. (<a href="../references.html#ref-ladwig2024risks" role="doc-biblioref">2024</a>)</span></td>
+<td style="text-align: left;">Meta-analysis and experiments</td>
+<td style="text-align: left;">Body-positive and “Instagram vs reality” content reduce body dissatisfaction in the short term</td>
+<td style="text-align: left;"><span class="ev ev-e1">E1</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="sanzari2023impact">Sanzari et al. (<a href="../references.html#ref-sanzari2023impact" role="doc-biblioref">2023</a>)</span>; <span class="citation" data-cites="wu2024digging">Wu et al. (<a href="../references.html#ref-wu2024digging" role="doc-biblioref">2024</a>)</span></td>
+<td style="text-align: left;">Two cohorts; systematic review of 38 studies</td>
+<td style="text-align: left;">Type of content, not time, associated with outcomes; some eating-related content implicated</td>
+<td style="text-align: left;"><span class="ev ev-e2">E2</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="citation" data-cites="kvardova2025navigating">Kvardova et al. (<a href="../references.html#ref-kvardova2025navigating" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="schreurs2022different">Schreurs &amp; Vandenbosch (<a href="../references.html#ref-schreurs2022different" role="doc-biblioref">2022</a>)</span></td>
+<td style="text-align: left;">Within-person panels of adolescents</td>
+<td style="text-align: left;">No consistent within-person increase in body dissatisfaction months later</td>
+<td style="text-align: left;"><span class="ev ev-e2">E2</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="citation" data-cites="ccdh2022deadly">Center for Countering Digital Hate (<a href="../references.html#ref-ccdh2022deadly" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="ccdh2024youtube">Center for Countering Digital Hate (<a href="../references.html#ref-ccdh2024youtube" role="doc-biblioref">2024</a>)</span>; <span class="citation" data-cites="golbeck2025recommender">Golbeck (<a href="../references.html#ref-golbeck2025recommender" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="meta2024people">Meta Platforms (<a href="../references.html#ref-meta2024people" role="doc-biblioref">2024</a>)</span></td>
+<td style="text-align: left;">Platform audits; internal company study</td>
+<td style="text-align: left;">Delivery of eating-disorder-relevant content rises with signalled interest or vulnerability</td>
+<td style="text-align: left;"><span class="ev ev-e2">E2</span> grey literature, appraised</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-ch4-outside" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-ch4-outside"><span class="header-section-number">4.2</span> Why ARFID falls outside that evidence</h2>
+<section id="sec-ch4-exclusion" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-exclusion">A definitional exclusion</h3>
+<p>The pathway just described runs through appearance comparison, internalisation of ideals and body dissatisfaction, and its outcome measures (body dissatisfaction, drive for thinness, dietary restraint) are designed to capture concern about weight and shape. ARFID is defined by the absence of that concern as the driver of restriction <span class="citation" data-cites="apa2022dsm5tr">(<a href="../references.html#ref-apa2022dsm5tr" role="doc-biblioref">American Psychiatric Association, 2022</a>)</span>, and measures that separate the two families of motivation exist precisely because the distinction matters clinically <span class="citation" data-cites="celik2026validity">(<a href="../references.html#ref-celik2026validity" role="doc-biblioref">Çelik et al., 2026</a>)</span>. The meta-analytic findings of <a href="#sec-ch4-established" class="quarto-xref"><span>Section 4.1</span></a> therefore cannot simply be transferred to ARFID.</p>
+<p>The boundary is not watertight. A nine-year-old with ARFID and severe malnutrition valued her small size and described a desire for thinness shaped by beauty ideals on social media, yet her restriction was driven by low appetite, fear of new foods and fear of adverse consequences <span class="citation" data-cites="barney2022food">(<a href="../references.html#ref-barney2022food" role="doc-biblioref">Barney et al., 2022</a>)</span>. In 515 adults recruited online, dysmorphic concern fully mediated the association between avoidant/restrictive eating and suicidal ideation <span class="citation" data-cites="salameh2024mediating">(<a href="../references.html#ref-salameh2024mediating" role="doc-biblioref">Salameh et al., 2024</a>)</span>; the design was cross-sectional and the eating measure a screen, but the finding suggests that body concern can co-occur with ARFID and matter for a subgroup. Neither observation licenses the transfer of body-image findings to ARFID. Neither licenses the opposite conclusion either, that ARFID is untouched by digital life.</p>
+</section>
+<section id="sec-ch4-bibliometric" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-bibliometric">How little light: a bibliometric check</h3>
+<p>How much of the research on social media concerns ARFID can be checked directly. On 21 November 2026, PubMed was searched for records published from 2013 (the year ARFID entered DSM-5) whose titles or abstracts named each condition, first alone and then together with any of six social-media terms. <a href="#fig-ch4-streetlight" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> shows the results.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-ch4-streetlight" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ch4-streetlight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-digital-environments_files/figure-html/fig-ch4-streetlight-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1640">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ch4-streetlight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Records in PubMed combining each condition with social-media terms, 2013 to 21 November 2026. Bars show the number of records (logarithmic scale); labels give the number combining the condition with social-media terms, the number naming the condition at all, and the share. Search strings: [condition terms][tiab] AND (“social media”[tiab] OR TikTok[tiab] OR Instagram[tiab] OR YouTube[tiab] OR Facebook[tiab] OR “social networking”[tiab]), with publication date from 2013. Condition terms: “body image”; “anorexia nervosa”; “bulimia nervosa”; “binge eating disorder” OR “binge-eating disorder”; orthorexia OR “orthorexia nervosa”; ARFID OR “avoidant/restrictive food intake” OR “avoidant restrictive food intake”. Counts depend on the terms chosen (for example, records using only ‘pro-ana’ are not captured) and are an indicator, not a census.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The proportions are not the main point: ARFID’s share (1.5%) is in fact higher than that of anorexia nervosa (0.5%), whose literature is dominated by clinical and biological work. The point is the absolute volume and, above all, what the records do. Screening the abstracts of the 14 ARFID records shows that most use platforms as a means rather than study them as an object (<a href="#tbl-ch4-arfid-records" class="quarto-xref">Table&nbsp;<span>4.2</span></a>). Nine name social media only as a recruitment or dissemination channel or as a keyword. Two measured media use in general samples of adolescents without analysing ARFID separately. Two are case reports in which content from social media is mentioned, one of them a case of orthorexia in which ARFID had been considered and excluded. One analysed platform content about ARFID: a study of pro-recovery videos on TikTok that included the hashtag #arfidrecovery <span class="citation" data-cites="greene2023visions">(<a href="../references.html#ref-greene2023visions" role="doc-biblioref">Greene et al., 2023</a>)</span>. On the evidence of their abstracts, none reported an analysis of digital exposure specific to ARFID, and none tested an association with the onset or course of the disorder.</p>
+<div id="tbl-ch4-arfid-records" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ch4-arfid-records-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.2: Screening of the 14 PubMed records (2013 to 21 November 2026) that combine ARFID terms with social-media terms in the title or abstract, classified by the role social media plays in each. Classification based on abstracts and author keywords; search strings as in <a href="#fig-ch4-streetlight" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>.
+</figcaption>
+<div aria-describedby="tbl-ch4-arfid-records-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 38%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Role of social media in the record</th>
+<th style="text-align: center;">Records</th>
+<th style="text-align: left;">Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Recruitment or dissemination channel, or keyword only</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;"><span class="citation" data-cites="rodan2025prescription">Rodan et al. (<a href="../references.html#ref-rodan2025prescription" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="burrell2025survey">Burrell et al. (<a href="../references.html#ref-burrell2025survey" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="bulik2023arfid">Bulik et al. (<a href="../references.html#ref-bulik2023arfid" role="doc-biblioref">2023</a>)</span> (preprint and journal versions); <span class="citation" data-cites="hog2025arfid">Hog et al. (<a href="../references.html#ref-hog2025arfid" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="ruizfischer2024tradeoff">Ruiz Fischer &amp; Starr (<a href="../references.html#ref-ruizfischer2024tradeoff" role="doc-biblioref">2024</a>)</span>; <span class="citation" data-cites="cunliffe2022lived">Cunliffe et al. (<a href="../references.html#ref-cunliffe2022lived" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="salameh2024mediating">Salameh et al. (<a href="../references.html#ref-salameh2024mediating" role="doc-biblioref">2024</a>)</span>; <span class="citation" data-cites="hoek2025incidence">Hoek (<a href="../references.html#ref-hoek2025incidence" role="doc-biblioref">2025</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Media use measured in general adolescent samples, without ARFID-specific analysis</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;"><span class="citation" data-cites="erraoui2025prevalence">Erraoui et al. (<a href="../references.html#ref-erraoui2025prevalence" role="doc-biblioref">2025</a>)</span>; <span class="citation" data-cites="zieba2025awareness">Zięba et al. (<a href="../references.html#ref-zieba2025awareness" role="doc-biblioref">2025</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Platform content mentioned in a case report</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;"><span class="citation" data-cites="barney2022food">Barney et al. (<a href="../references.html#ref-barney2022food" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="yoshimura2023case">Yoshimura et al. (<a href="../references.html#ref-yoshimura2023case" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Analysis of platform content concerning ARFID</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"><span class="citation" data-cites="greene2023visions">Greene et al. (<a href="../references.html#ref-greene2023visions" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARFID-specific analysis of digital exposure</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>There is an irony here. Platforms have become part of the infrastructure of ARFID research: an international survey of people with eating disorders, advertised through social media, online forums and clinical services, recruited 6,612 respondents, 589 of whom reported a diagnosis of ARFID <span class="citation" data-cites="rodan2025prescription">(<a href="../references.html#ref-rodan2025prescription" role="doc-biblioref">Rodan et al., 2025</a>)</span>, and much population data on ARFID now comes from online panels and online recruitment (<a href="01-context-prevalence.html" class="quarto-xref"><span>Chapter 1</span></a>). The platforms help researchers find people with ARFID but are almost never what is being studied. That raises a further, methodological caution: people recruited through platforms may differ systematically from those who are not, including in exactly the digital habits that this chapter is concerned with.</p>
+</section>
+</section>
+<section id="sec-ch4-pathways" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-ch4-pathways"><span class="header-section-number">4.3</span> Candidate digital pathways</h2>
+<p>If the keys are not under the body-image lamp, where might they be? This section proposes seven places to look. Each is stated as a hypothesis, linked to the presentation of ARFID it would most plausibly affect (the three dials of <a href="02-related-disorders.html#sec-ch2-dials" class="quarto-xref"><span>Section 2.2.1</span></a>: sensory sensitivity, lack of interest, fear of aversive consequences) and graded. <a href="#tbl-gap-map" class="quarto-xref">Table&nbsp;<span>4.3</span></a> draws them together at the end.</p>
+<section id="sec-ch4-fear" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-fear">Vicarious aversive content and fear learning</h3>
+<p>The fear presentation of ARFID often begins with an aversive eating event. In a multi-site clinical study, a history of vomiting or choking was recorded in 13.2% of young people with ARFID <span class="citation" data-cites="fisher2014characteristics">(<a href="../references.html#ref-fisher2014characteristics" role="doc-biblioref">Fisher et al., 2014</a>)</span>, and a recent theoretical model compares the course of the fear presentation with that of panic disorder <span class="citation" data-cites="zickgraf2025broadening">(<a href="../references.html#ref-zickgraf2025broadening" role="doc-biblioref">Zickgraf &amp; Schwartz, 2025</a>)</span>. In functional imaging, images of choking and vomiting elicited amygdala responses across young people, with greater insula activation in those with the fear presentation; the authors suggest that universally feared experiences of this kind may act as the unconditioned stimulus from which ARFID fear is learnt <span class="citation" data-cites="sailer2025amygdala">(<a href="../references.html#ref-sailer2025amygdala" role="doc-biblioref">Sailer et al., 2025</a>)</span>. Not every patient, however, recalls a frightening event of their own.</p>
+<p>Experimental psychology offers a route by which fear can be acquired without direct experience. Forty years of research show that fears can be learnt <em>vicariously</em>, by watching other people’s responses <span class="citation" data-cites="askew2008vicarious">(<a href="../references.html#ref-askew2008vicarious" role="doc-biblioref">Askew &amp; Field, 2008</a>)</span>. In children, pairing pictures of novel animals with fearful faces increased fear beliefs, avoidance, heart rate and attentional bias towards the animals, and the changes in beliefs and avoidance persisted at one week and one month <span class="citation" data-cites="reynolds2014effect">(<a href="../references.html#ref-reynolds2014effect" role="doc-biblioref">Reynolds et al., 2014</a>)</span>. Fear also spread <em>second-hand</em>: animals merely seen alongside the fear-paired animal acquired fear-related responses, which the authors suggest may explain why some people cannot recall any learning episode for their fears <span class="citation" data-cites="reynolds2017learning">(<a href="../references.html#ref-reynolds2017learning" role="doc-biblioref">Reynolds et al., 2017</a>)</span>. In 60 children aged 6–10, peers were as effective as adults in transmitting fear, and later pairing with positive faces reduced it <span class="citation" data-cites="dunne2018vicarious">(<a href="../references.html#ref-dunne2018vicarious" role="doc-biblioref">Dunne &amp; Askew, 2018</a>)</span>. A systematic review of 18 experiments found that positive modelling prevented, reduced or reversed fear in most of them <span class="citation" data-cites="krause2022preventing">(<a href="../references.html#ref-krause2022preventing" role="doc-biblioref">Krause &amp; Askew, 2022</a>)</span>.</p>
+<p><strong>Hypothesis.</strong> Short-form video makes vicarious aversive eating events abundant: people choking, gagging, vomiting, reacting to food poisoning or allergens, or warning that a food is dangerous. For a child or adolescent with a sensitive threat system, each such video may function as a vicarious learning trial, and repeated recommendation multiplies the trials. Second-order learning would allow fear to spread from the food shown to foods associated with it. The same literature suggests the converse: content showing calm peers eating varied food could act as positive modelling, which is one reason why a purely restrictive response to online content may be the wrong one. Grade: <span class="ev ev-e2">E2</span> for vicarious fear learning in children, with non-food stimuli and in the laboratory; <span class="ev ev-h">H</span> for the digital route to ARFID. The laboratory paradigms used pictures of animals and faces, not videos of eating, and that gap is exactly what research would need to close.</p>
+</section>
+<section id="sec-ch4-gut" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-gut">Gut-health, elimination diets and wellness advice</h3>
+<p>Gastrointestinal conditions are closely associated with ARFID. The association appears in population data <span class="citation" data-cites="flack2026prevalence">(<a href="../references.html#ref-flack2026prevalence" role="doc-biblioref">Flack et al., 2026</a>)</span>, ARFID symptoms were found in 19% of patients with coeliac disease or non-coeliac gluten sensitivity at consultation <span class="citation" data-cites="atkins2026food">(<a href="../references.html#ref-atkins2026food" role="doc-biblioref">Atkins et al., 2026</a>)</span>, and in inflammatory bowel disease positive screens were associated with lower food literacy <span class="citation" data-cites="yin2023risk">(<a href="../references.html#ref-yin2023risk" role="doc-biblioref">Yin et al., 2023</a>)</span>. Online, people with gut symptoms meet a large volume of dietary advice from creators who present themselves as experts <span class="citation" data-cites="munro2024diet">(<a href="../references.html#ref-munro2024diet" role="doc-biblioref">Munro et al., 2024</a>)</span>, alongside what one commentator calls “wellness scams” <span class="citation" data-cites="vanderlinden2026social">(<a href="../references.html#ref-vanderlinden2026social" role="doc-biblioref">Linden, 2026</a>)</span>.</p>
+<p><strong>Hypothesis.</strong> Advice to eliminate foods in response to symptoms narrows the diet. In people who already attend closely to bodily sensations, the interoceptive sensitivity that the panic-disorder model places at the centre of fear-driven ARFID <span class="citation" data-cites="zickgraf2025broadening">(<a href="../references.html#ref-zickgraf2025broadening" role="doc-biblioref">Zickgraf &amp; Schwartz, 2025</a>)</span>, content attributing symptoms to particular foods may supply the catastrophic interpretations that maintain avoidance. Grade: <span class="ev ev-e2">E2</span> for the clinical association between gastrointestinal illness and ARFID; <span class="ev ev-h">H</span> for the digital route.</p>
+</section>
+<section id="sec-ch4-orthorexia" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-orthorexia">“Clean eating” and orthorexic ideals</h3>
+<p>A systematic review of 22 studies, mostly cross-sectional and in non-clinical samples, found that greater social media use was associated with more symptoms of orthorexia nervosa, particularly where content concerned nutrition, thinness and exercise, with stronger associations for Instagram, Tumblr and Grindr <span class="citation" data-cites="vintroalcaraz2026idealized">(<a href="../references.html#ref-vintroalcaraz2026idealized" role="doc-biblioref">Vintró-Alcaraz et al., 2026</a>)</span>. A case report shows how the boundary with ARFID is drawn in practice: a 13-year-old with rapid weight loss was first thought to have anorexia nervosa, then ARFID, which was excluded because she showed no food avoidance as such; her restriction followed rules about nutrition taken from magazines and social media promoting an almost exclusively vegetable diet <span class="citation" data-cites="yoshimura2023case">(<a href="../references.html#ref-yoshimura2023case" role="doc-biblioref">Yoshimura et al., 2023</a>)</span>. Proposed criteria for orthorexia remain provisional <span class="citation" data-cites="donini2022consensus">(<a href="../references.html#ref-donini2022consensus" role="doc-biblioref">Donini et al., 2022</a>)</span>.</p>
+<p><strong>Hypothesis.</strong> Moralised categories of food (“clean”, “toxic”, “processed”) narrow the range of acceptable foods for reasons that are neither sensory nor appetitive. Where fear of contamination or illness enters, the restriction can come to resemble the fear presentation of ARFID. The practical implication is diagnostic: digital content may push some presentations towards this boundary, so screening and referral must ask <em>why</em> a young person avoids a food, not only <em>what</em> they avoid (<a href="05-generative-ai-protocol.html" class="quarto-xref"><span>Chapter 5</span></a>). Grade: <span class="ev ev-e1">E1</span> for the cross-sectional association between social media use and orthorexic symptoms; <span class="ev ev-e3">E3</span> for boundary cases relevant to ARFID.</p>
+</section>
+<section id="sec-ch4-identity" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-identity">Diagnostic identity and online communities</h3>
+<p>Diagnosis-specific communities form around hashtags. A thematic analysis of 241 popular pro-recovery videos on TikTok under five hashtags, among them #arfidrecovery, found clear differences in how recovery was imagined from one diagnosis to the next <span class="citation" data-cites="greene2023visions">(<a href="../references.html#ref-greene2023visions" role="doc-biblioref">Greene et al., 2023</a>)</span>. A content analysis of 100 TikTok videos on depression and anxiety, each viewed more than a million times, found that videos presenting personal experience attracted more engagement than videos by health professionals, and that mention of a professional diagnosis was the least common topic; the authors warn that attributing generic symptoms to a condition may encourage self-diagnosis <span class="citation" data-cites="samuel2024therapytok">(<a href="../references.html#ref-samuel2024therapytok" role="doc-biblioref">Samuel et al., 2024</a>)</span>.</p>
+<p>For ARFID the potential benefits are real. Recognition is poor, adults often go undiagnosed (<a href="02-related-disorders.html#sec-ch2-adulthood" class="quarto-xref"><span>Section 2.5.3</span></a>), and parents of selective eaters gather in online support groups <span class="citation" data-cites="cunliffe2022lived">(<a href="../references.html#ref-cunliffe2022lived" role="doc-biblioref">Cunliffe et al., 2022</a>)</span>. Communities may be where people first find a name for their difficulties and the confidence to seek help. The potential harms are equally plausible: ordinary picky eating relabelled as a disorder, an identity consolidated around a list of “safe foods”, accommodation normalised as the only kind response, or a presentation driven by weight concern presented, and accepted, as ARFID. Grade: <span class="ev ev-e3">E3</span> for the existence and character of ARFID content; <span class="ev ev-h">H</span> for its effects on help-seeking and course.</p>
+</section>
+<section id="sec-ch4-overshadowing" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-overshadowing">Diagnostic overshadowing, human and algorithmic</h3>
+<p><em>Diagnostic overshadowing</em> occurs when a salient explanation leads observers to miss another. The dominant body-image frame can lead adults to overlook restriction that has nothing to do with weight, or to read co-occurring body concerns as the cause of restriction that they do not drive <span class="citation" data-cites="barney2022food">(<a href="../references.html#ref-barney2022food" role="doc-biblioref">Barney et al., 2022</a>)</span>. The same frame is now being written into software. Methods for detecting eating disorders from social media content (content tags, topic modelling and natural-language processing) have been reviewed with the conclusion that they are feasible but that platforms’ moderation systems are opaque and need input from eating-disorder experts <span class="citation" data-cites="dadamo2026detecting">(<a href="../references.html#ref-dadamo2026detecting" role="doc-biblioref">D’Adamo et al., 2026</a>)</span>. Large language models have been used to identify diet and body concerns in online communities <span class="citation" data-cites="chu2024large">(<a href="../references.html#ref-chu2024large" role="doc-biblioref">Chu et al., 2024</a>)</span>. Such systems learn from the vocabulary of the communities on which they are trained, and that vocabulary is overwhelmingly about bodies. Their performance can also be uneven in ways that are hard to predict: in Spanish-language Twitter data from 177 users with signs of anorexia nervosa and 326 controls, classifiers missed far more cases among women (false-negative rate 0.082) than among men (0.005) <span class="citation" data-cites="solansnoguero2023gender">(<a href="../references.html#ref-solansnoguero2023gender" role="doc-biblioref">Solans Noguero et al., 2023</a>)</span>. The internal Meta study adds that classifiers built to detect rule violations captured almost none of the body-focused material that human reviewers flagged <span class="citation" data-cites="meta2024people">(<a href="../references.html#ref-meta2024people" role="doc-biblioref">Meta Platforms, 2024</a>)</span>. Content relevant to ARFID (videos of choking, lists of “safe foods”, complaints about textures) does not appear among the categories described in any of the documents reviewed here.</p>
+<p><strong>Hypothesis.</strong> The body-image frame produces systematic under-recognition of ARFID by people and by automated systems alike. Grade: <span class="ev ev-e3">E3</span>. This is the pathway most directly relevant to <a href="05-generative-ai-protocol.html" class="quarto-xref"><span>Chapter 5</span></a>, because a protocol based on a large language model could reproduce the same blind spot unless it is designed and tested against it.</p>
+</section>
+<section id="sec-ch4-bubble" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-bubble">Recommender amplification and the “bubble” effect</h3>
+<p>Engagement-optimised recommender systems learn from implicit signals such as how long a user lingers on an item. The audits described above used exactly such signals (accounts “paused briefly” on videos and liked them) and found that the feed adapted within minutes <span class="citation" data-cites="ccdh2022deadly">(<a href="../references.html#ref-ccdh2022deadly" role="doc-biblioref">Center for Countering Digital Hate, 2022</a>)</span>. A young person whose attention is captured by threat-relevant content (and attentional bias towards feared stimuli is one of the effects of vicarious fear learning <span class="citation" data-cites="reynolds2014effect">(<a href="../references.html#ref-reynolds2014effect" role="doc-biblioref">Reynolds et al., 2014</a>)</span>) supplies the signal that such systems reward. Desire paths across a lawn offer an analogy: each crossing flattens the grass a little, which makes the same route more likely next time, until the path becomes <em>the</em> route. A recommender can wear a path in one user’s feed in the same way.</p>
+<p><a href="#fig-ch4-bubble" class="quarto-xref">Figure&nbsp;<span>4.3</span></a> makes the mechanism explicit with a deliberately simple simulation. A feed draws 20 items per session from ten topics in proportion to learnt weights, with 10% of slots reserved for exploration. The user engages with each item with probability 0.30, except for one topic, here food-fear videos, where the probability is multiplied by an attraction ratio <em>r</em>. After each session, the weights decay by 10% and increase by one unit for each engagement. Nothing in the model is harmful by design: there is no malicious actor, no policy-violating content and no intention to narrow the feed.</p>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Show the simulation code (R)</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>simulate_feed <span class="ot">&lt;-</span> <span class="cf">function</span>(r, <span class="at">cap =</span> <span class="cn">NA</span>, <span class="at">K =</span> <span class="dv">10</span>, <span class="at">sessions =</span> <span class="dv">60</span>, <span class="at">n_feed =</span> <span class="dv">20</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">p0 =</span> <span class="fl">0.30</span>, <span class="at">eta =</span> <span class="dv">1</span>, <span class="at">lambda =</span> <span class="fl">0.90</span>, <span class="at">eps =</span> <span class="fl">0.10</span>) {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span>, K); share <span class="ot">&lt;-</span> <span class="fu">numeric</span>(sessions)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="fu">seq_len</span>(sessions)) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    pr <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> eps) <span class="sc">*</span> w <span class="sc">/</span> <span class="fu">sum</span>(w) <span class="sc">+</span> eps <span class="sc">/</span> K            <span class="co"># exploitation plus exploration</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(cap) <span class="sc">&amp;&amp;</span> pr[<span class="dv">1</span>] <span class="sc">&gt;</span> cap) {                  <span class="co"># optional exposure cap on topic 1</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      pr[<span class="sc">-</span><span class="dv">1</span>] <span class="ot">&lt;-</span> pr[<span class="sc">-</span><span class="dv">1</span>] <span class="sc">/</span> <span class="fu">sum</span>(pr[<span class="sc">-</span><span class="dv">1</span>]) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> cap); pr[<span class="dv">1</span>] <span class="ot">&lt;-</span> cap }</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    share[t] <span class="ot">&lt;-</span> pr[<span class="dv">1</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    feed <span class="ot">&lt;-</span> <span class="fu">sample.int</span>(K, n_feed, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> pr)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    p <span class="ot">&lt;-</span> <span class="fu">rep</span>(p0, K); p[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">min</span>(<span class="dv">1</span>, p0 <span class="sc">*</span> r)            <span class="co"># attraction ratio for topic 1</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    eng <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(n_feed, <span class="dv">1</span>, p[feed])                  <span class="co"># implicit engagement (dwell, like)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    w <span class="ot">&lt;-</span> <span class="fu">pmax</span>(lambda <span class="sc">*</span> w <span class="sc">+</span> eta <span class="sc">*</span> <span class="fu">tabulate</span>(feed[eng <span class="sc">==</span> <span class="dv">1</span>], <span class="at">nbins =</span> K), <span class="fl">1e-6</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  share</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>runs <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">list</span>(<span class="fu">list</span>(<span class="at">r =</span> <span class="dv">1</span>, <span class="at">cap =</span> <span class="cn">NA</span>), <span class="fu">list</span>(<span class="at">r =</span> <span class="fl">1.15</span>, <span class="at">cap =</span> <span class="cn">NA</span>), <span class="fu">list</span>(<span class="at">r =</span> <span class="fl">1.3</span>, <span class="at">cap =</span> <span class="cn">NA</span>),</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                                   <span class="fu">list</span>(<span class="at">r =</span> <span class="fl">1.5</span>, <span class="at">cap =</span> <span class="cn">NA</span>), <span class="fu">list</span>(<span class="at">r =</span> <span class="fl">1.5</span>, <span class="at">cap =</span> <span class="fl">0.15</span>)), <span class="cf">function</span>(s) {</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">500</span>, <span class="fu">simulate_feed</span>(s<span class="sc">$</span>r, s<span class="sc">$</span>cap))</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">session =</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(m)), <span class="at">mean =</span> <span class="fu">rowMeans</span>(m),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>             <span class="at">lo =</span> <span class="fu">apply</span>(m, <span class="dv">1</span>, quantile, <span class="fl">0.10</span>), <span class="at">hi =</span> <span class="fu">apply</span>(m, <span class="dv">1</span>, quantile, <span class="fl">0.90</span>),</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>             <span class="at">r =</span> s<span class="sc">$</span>r, <span class="at">policy =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(s<span class="sc">$</span>cap), <span class="st">"Engagement only"</span>, <span class="st">"Engagement with 15% cap"</span>))</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>}))</span></code></pre></div>
+</details>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-ch4-bubble" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ch4-bubble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-digital-environments_files/figure-html/fig-ch4-bubble-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1640">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ch4-bubble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: A stylised simulation of recommender amplification. Each line shows the mean share of a feed devoted to one topic (for example, food-fear videos) over 60 sessions, across 500 simulated users, when users engage with that topic r times as often as with nine others. The shaded band shows the 10th to 90th percentiles for r = 1.5. The dashed line shows the same user (r = 1.5) when the platform caps exposure to the topic at 15%, which is possible only if the topic is recognised as sensitive. Parameters are illustrative, not estimated from any platform.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Three features of the result are worth noting. First, a modest difference in attention is enough: with an attraction ratio of 1.3, the topic’s share of the feed nearly triples, and at 1.5 it reaches almost half the feed by the sixtieth session. Second, even a user with no particular attraction (r = 1) can drift: the mean stays at 10%, but individual feeds wander widely by chance, which is why “lock-in” can occur without any initial vulnerability. Third, an exposure cap holds the share down, but only if the content falls in a category that the platform recognises as sensitive. Food-fear content would not be capped by rules written for “eating-disorder content” in the body-image sense, and for such content the dashed line would simply coincide with the solid one.</p>
+<p>The simulation shows that the mechanism is possible and how little it requires. It does not show that it operates on any particular platform, still less that it causes ARFID. Grade: <span class="ev ev-e2">E2</span> for the amplification of eating-disorder content by recommenders; <span class="ev ev-h">H</span> for content relevant to ARFID.</p>
+</section>
+<section id="sec-ch4-parents" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ch4-parents">The parental information environment</h3>
+<p><a href="03-genes-environment.html#sec-ch3-family" class="quarto-xref"><span>Section 3.4</span></a> showed that parental pressure and a child’s selectivity influence each other over time <span class="citation" data-cites="jansen2017directional">(<a href="../references.html#ref-jansen2017directional" role="doc-biblioref">Jansen et al., 2017</a>)</span>, and that accommodation can maintain avoidance <span class="citation" data-cites="shimshoni2020space">(<a href="../references.html#ref-shimshoni2020space" role="doc-biblioref">Shimshoni et al., 2020</a>)</span>. Parents increasingly look for feeding advice online. In an Australian survey of 330 parents of children aged 2–5 with feeding concerns, 53.9% were concerned about fussy eating; online formats (websites, email, Facebook) were the preferred route for help, and 42.7% said they would take part in an online programme for more than 12 weeks <span class="citation" data-cites="boswell2019prospects">(<a href="../references.html#ref-boswell2019prospects" role="doc-biblioref">Boswell et al., 2019</a>)</span>. A qualitative study of 29 caregivers in China found that digital information environments could either support or undermine healthy feeding, and identified misleading online information among the influences that sustained less healthy practices <span class="citation" data-cites="tan2026multilevel">(<a href="../references.html#ref-tan2026multilevel" role="doc-biblioref">Tan et al., 2026</a>)</span>.</p>
+<p><strong>Hypothesis.</strong> The advice parents meet online can push them towards pressure (“no pudding until the plate is clean”) or towards accommodation (“just let them have their safe foods”), both of which are implicated in maintaining selective eating. The quality of advice about ARFID specifically has not been studied. Grade: <span class="ev ev-e3">E3</span> for parents’ reliance on online sources; <span class="ev ev-h">H</span> for effects on ARFID trajectories. The parental pathway also points to an opportunity: evidence-based guidance delivered where parents already look.</p>
+<div id="tbl-gap-map" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gap-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.3: Evidence-gap map of digital pathways relevant to ARFID. Grades: E1 systematic or meta-analytic; E2 several consistent primary studies; E3 single studies, case reports or cross-sectional associations; H hypothesis only.
+</figcaption>
+<div aria-describedby="tbl-gap-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Pathway</th>
+<th style="text-align: left;">Proposed mechanism</th>
+<th style="text-align: left;">Presentation most affected</th>
+<th style="text-align: left;">Evidence</th>
+<th style="text-align: left;">What would test it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Vicarious aversive content</td>
+<td style="text-align: left;">Videos of choking, vomiting or “food scares” act as vicarious fear-learning trials, with generalisation to related foods</td>
+<td style="text-align: left;">Fear of aversive consequences</td>
+<td style="text-align: left;"><span class="ev ev-e2">E2</span> for vicarious fear learning in children with non-food stimuli <span class="citation" data-cites="askew2008vicarious reynolds2014effect reynolds2017learning">(<a href="../references.html#ref-askew2008vicarious" role="doc-biblioref">Askew &amp; Field, 2008</a>; <a href="../references.html#ref-reynolds2014effect" role="doc-biblioref">Reynolds et al., 2014</a>, <a href="../references.html#ref-reynolds2017learning" role="doc-biblioref">2017</a>)</span>; <span class="ev ev-h">H</span> for the digital route</td>
+<td style="text-align: left;">Content audits of recommendation chains; experiments in adults with food stimuli and positive-modelling conditions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gut-health and elimination-diet content</td>
+<td style="text-align: left;">Online advice normalises self-initiated restriction and supplies catastrophic interpretations of symptoms</td>
+<td style="text-align: left;">Fear; lack of interest</td>
+<td style="text-align: left;"><span class="ev ev-e2">E2</span> for the clinical association <span class="citation" data-cites="flack2026prevalence atkins2026food yin2023risk">(<a href="../references.html#ref-atkins2026food" role="doc-biblioref">Atkins et al., 2026</a>; <a href="../references.html#ref-flack2026prevalence" role="doc-biblioref">Flack et al., 2026</a>; <a href="../references.html#ref-yin2023risk" role="doc-biblioref">Yin et al., 2023</a>)</span>; <span class="ev ev-h">H</span> for the digital route</td>
+<td style="text-align: left;">Content-specific media-diet measures in gastroenterology cohorts</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">“Clean eating” and orthorexic ideals</td>
+<td style="text-align: left;">Moralised food categories narrow the range of acceptable foods</td>
+<td style="text-align: left;">Boundary with orthorexia</td>
+<td style="text-align: left;"><span class="ev ev-e1">E1</span> for the association with orthorexic symptoms <span class="citation" data-cites="vintroalcaraz2026idealized">(<a href="../references.html#ref-vintroalcaraz2026idealized" role="doc-biblioref">Vintró-Alcaraz et al., 2026</a>)</span>; <span class="ev ev-e3">E3</span> for boundary cases <span class="citation" data-cites="yoshimura2023case">(<a href="../references.html#ref-yoshimura2023case" role="doc-biblioref">Yoshimura et al., 2023</a>)</span></td>
+<td style="text-align: left;">Differential-diagnosis studies with content measures</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Diagnostic identity in online communities</td>
+<td style="text-align: left;">Diagnosis-specific hashtags shape self-recognition, help-seeking and sometimes self-labelling</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;"><span class="ev ev-e3">E3</span> <span class="citation" data-cites="greene2023visions samuel2024therapytok">(<a href="../references.html#ref-greene2023visions" role="doc-biblioref">Greene et al., 2023</a>; <a href="../references.html#ref-samuel2024therapytok" role="doc-biblioref">Samuel et al., 2024</a>)</span></td>
+<td style="text-align: left;">Content analysis of ARFID communities linked to surveys of help-seeking</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Diagnostic overshadowing, human and algorithmic</td>
+<td style="text-align: left;">The body-image frame leads adults, screens and classifiers to miss restriction without weight concern</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;"><span class="ev ev-e3">E3</span> <span class="citation" data-cites="barney2022food solansnoguero2023gender dadamo2026detecting">(<a href="../references.html#ref-barney2022food" role="doc-biblioref">Barney et al., 2022</a>; <a href="../references.html#ref-dadamo2026detecting" role="doc-biblioref">D’Adamo et al., 2026</a>; <a href="../references.html#ref-solansnoguero2023gender" role="doc-biblioref">Solans Noguero et al., 2023</a>)</span></td>
+<td style="text-align: left;">Vignette studies with clinicians, teachers and LLMs (→ <a href="05-generative-ai-protocol.html" class="quarto-xref"><span>Chapter 5</span></a>); audits of detection systems</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Recommender amplification</td>
+<td style="text-align: left;">Engagement-optimised feeds narrow exposure around whatever a user lingers on</td>
+<td style="text-align: left;">All, especially fear</td>
+<td style="text-align: left;"><span class="ev ev-e2">E2</span> for eating-disorder content <span class="citation" data-cites="ccdh2022deadly ccdh2024youtube golbeck2025recommender meta2024people">(<a href="../references.html#ref-ccdh2022deadly" role="doc-biblioref">Center for Countering Digital Hate, 2022</a>, <a href="../references.html#ref-ccdh2024youtube" role="doc-biblioref">2024</a>; <a href="../references.html#ref-golbeck2025recommender" role="doc-biblioref">Golbeck, 2025</a>; <a href="../references.html#ref-meta2024people" role="doc-biblioref">Meta Platforms, 2024</a>)</span>; <span class="ev ev-h">H</span> for ARFID</td>
+<td style="text-align: left;">Sock-puppet audits seeded with ARFID-relevant interests; platform data under the DSA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Parental information environment</td>
+<td style="text-align: left;">Online advice tilts parents towards pressure or accommodation</td>
+<td style="text-align: left;">Sensory; lack of interest</td>
+<td style="text-align: left;"><span class="ev ev-e3">E3</span> <span class="citation" data-cites="boswell2019prospects tan2026multilevel">(<a href="../references.html#ref-boswell2019prospects" role="doc-biblioref">Boswell et al., 2019</a>; <a href="../references.html#ref-tan2026multilevel" role="doc-biblioref">Tan et al., 2026</a>)</span>; <span class="ev ev-h">H</span> for ARFID</td>
+<td style="text-align: left;">Content analysis of top-ranked feeding advice; trials of evidence-based online guidance</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-ch4-measurement" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-ch4-measurement"><span class="header-section-number">4.4</span> Measuring digital exposure</h2>
+<p>Testing these hypotheses requires measuring what people actually encounter online, and the dominant measure, self-reported time, is the weakest. The evidence reviewed above points to content and process rather than time <span class="citation" data-cites="sanzari2023impact bonfanti2025association">(<a href="../references.html#ref-bonfanti2025association" role="doc-biblioref">Bonfanti et al., 2025</a>; <a href="../references.html#ref-sanzari2023impact" role="doc-biblioref">Sanzari et al., 2023</a>)</span>, and self-reports of time online are known to be imprecise. <a href="#tbl-ch4-designs" class="quarto-xref">Table&nbsp;<span>4.4</span></a> compares the main alternatives.</p>
+<div id="tbl-ch4-designs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ch4-designs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.4: Designs for measuring digital exposure, with their strengths and limits.
+</figcaption>
+<div aria-describedby="tbl-ch4-designs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Design</th>
+<th style="text-align: left;">What it captures</th>
+<th style="text-align: left;">Main strength</th>
+<th style="text-align: left;">Main limitation</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Self-reported time or frequency</td>
+<td style="text-align: left;">Overall use</td>
+<td style="text-align: left;">Cheap; comparable across studies</td>
+<td style="text-align: left;">Imprecise; blind to content</td>
+<td style="text-align: left;">Most studies in <span class="citation" data-cites="dane2023social">Dane &amp; Bhatia (<a href="../references.html#ref-dane2023social" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Self-reported content exposure and problematic use</td>
+<td style="text-align: left;">Types of content; compulsive use</td>
+<td style="text-align: left;">Closer to mechanism</td>
+<td style="text-align: left;">Recall bias; categories fixed in advance</td>
+<td style="text-align: left;"><span class="citation" data-cites="sanzari2023impact">Sanzari et al. (<a href="../references.html#ref-sanzari2023impact" role="doc-biblioref">2023</a>)</span>; <span class="citation" data-cites="ioannidis2021problematic">Ioannidis et al. (<a href="../references.html#ref-ioannidis2021problematic" role="doc-biblioref">2021</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Passive sensing (“digital phenotyping”)</td>
+<td style="text-align: left;">Objective app use, mobility, screen time</td>
+<td style="text-align: left;">No recall bias</td>
+<td style="text-align: left;">Shows apps, not content; consent burden</td>
+<td style="text-align: left;"><span class="citation" data-cites="calvert2025social">Calvert et al. (<a href="../references.html#ref-calvert2025social" role="doc-biblioref">2025</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Data donation</td>
+<td style="text-align: left;">Users’ own platform histories, exported and shared</td>
+<td style="text-align: left;">Real content at individual level</td>
+<td style="text-align: left;">Selective participation; formats vary by platform</td>
+<td style="text-align: left;">Not yet used in ARFID</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sock-puppet audit</td>
+<td style="text-align: left;">What a platform serves to a simulated profile</td>
+<td style="text-align: left;">Isolates the recommender’s response</td>
+<td style="text-align: left;">Few accounts; short windows; snapshot in time</td>
+<td style="text-align: left;"><span class="citation" data-cites="ccdh2022deadly">Center for Countering Digital Hate (<a href="../references.html#ref-ccdh2022deadly" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="ccdh2024youtube">Center for Countering Digital Hate (<a href="../references.html#ref-ccdh2024youtube" role="doc-biblioref">2024</a>)</span>; <span class="citation" data-cites="golbeck2025recommender">Golbeck (<a href="../references.html#ref-golbeck2025recommender" role="doc-biblioref">2025</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Laboratory exposure experiment</td>
+<td style="text-align: left;">Short-term effect of specific content</td>
+<td style="text-align: left;">Causal inference</td>
+<td style="text-align: left;">Artificial setting; short-term outcomes only</td>
+<td style="text-align: left;"><span class="citation" data-cites="fioravanti2022exposure">Fioravanti et al. (<a href="../references.html#ref-fioravanti2022exposure" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="ladwig2024risks">Ladwig et al. (<a href="../references.html#ref-ladwig2024risks" role="doc-biblioref">2024</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Platform data for vetted researchers</td>
+<td style="text-align: left;">Platforms’ internal data on exposure and recommendation</td>
+<td style="text-align: left;">Scale and accuracy</td>
+<td style="text-align: left;">Access procedures; EU systemic-risk scope</td>
+<td style="text-align: left;">DSA Art. 40 <span class="citation" data-cites="eu2025dataaccess">(<a href="../references.html#ref-eu2025dataaccess" role="doc-biblioref">European Commission, 2025a</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The last row is new. Under Article 40 of the Digital Services Act <span class="citation" data-cites="eu2022dsa">(<a href="../references.html#ref-eu2022dsa" role="doc-biblioref">European Parliament and Council of the European Union, 2022</a>)</span>, vetted researchers can request access to non-public data from very large online platforms and search engines to study systemic risks in the European Union. The delegated regulation that sets out the procedures was adopted on 2 July 2025 and entered into force on 29 October 2025, together with a data access portal <span class="citation" data-cites="eu2025dataaccess">(<a href="../references.html#ref-eu2025dataaccess" role="doc-biblioref">European Commission, 2025a</a>)</span>. The systemic risks defined in Article 34 of the Act include negative effects on the protection of minors and serious negative consequences for people’s physical and mental well-being <span class="citation" data-cites="eu2022dsa">(<a href="../references.html#ref-eu2022dsa" role="doc-biblioref">European Parliament and Council of the European Union, 2022</a>)</span>, so questions about ARFID-relevant content could in principle be framed as eligible research. No study has yet done so.</p>
+<p>Every one of these designs raises ethical questions when the population is young. Audits should use adult personas wherever the question allows; exposure experiments with fear-relevant stimuli should begin in adults and include positive-modelling conditions; and data donation by minors involves consent, assent and data-protection requirements that vary by country (in Spain, for example, the age of digital consent is 14 <span class="citation" data-cites="spain2018lopdgdd">(<a href="../references.html#ref-spain2018lopdgdd" role="doc-biblioref">Jefatura del Estado, 2018</a>)</span>). None of these obstacles is insurmountable, but each needs to be designed in from the start.</p>
+</section>
+<section id="sec-ch4-governance" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-ch4-governance"><span class="header-section-number">4.5</span> Governance: bans, design duties and the category problem</h2>
+<p>Policy has moved faster than evidence. Australia’s minimum-age law, which took effect on 10 December 2025, requires designated platforms to take reasonable steps to prevent people under 16 from holding accounts. In the first weeks, platforms removed access to about 4.7 million accounts identified as belonging to under-16s <span class="citation" data-cites="esafety2026platforms">(<a href="../references.html#ref-esafety2026platforms" role="doc-biblioref">eSafety Commissioner, 2026b</a>)</span>. Three months in, the regulator’s evaluation, a longitudinal study of more than 4,000 children and families conducted with Stanford University’s Social Media Lab, reported that account ownership among children aged 10–15 had fallen from 52.4% to 42.1%, a decline the regulator described as modest but statistically significant; most under-16s who had accounts before the law were able to keep them or create new ones, and reported use of the platforms fell only from 85.9% to 81.5% <span class="citation" data-cites="esafety2026early">(<a href="../references.html#ref-esafety2026early" role="doc-biblioref">eSafety Commissioner, 2026a</a>)</span>. These are early results with no outcomes for eating disorders.</p>
+<p>Critics argue that bans of this kind lack an evidential basis. The best available evidence, though limited, suggests no difference in students’ mental health between schools that heavily restrict social media and those that do not; bans confer no skills; and they leave out AI chatbots. The alternative proposed is to require age-appropriate feeds not based on maximising engagement, enforced by independent regulators, alongside sustained investment in digital education <span class="citation" data-cites="vanderlinden2026social">(<a href="../references.html#ref-vanderlinden2026social" role="doc-biblioref">Linden, 2026</a>)</span>.</p>
+<p>The European Union has taken the design route. Article 28 of the Digital Services Act requires platforms accessible to minors to ensure a high level of privacy, safety and security <span class="citation" data-cites="eu2022dsa">(<a href="../references.html#ref-eu2022dsa" role="doc-biblioref">European Parliament and Council of the European Union, 2022</a>)</span>, and the Commission’s guidelines of July 2025, which it uses as a benchmark for compliance, address recommender systems directly. Providers should rely on implicit, engagement-based signals only after assessing whether doing so is in the best interests of the minor, should prioritise explicit signals that users provide themselves, and should prevent minors’ exposure to recommendations that could put their safety at risk, particularly where such content is encountered repeatedly. The example given is content promoting unrealistic beauty standards or dieting <span class="citation" data-cites="ec2025minors">(<a href="../references.html#ref-ec2025minors" role="doc-biblioref">European Commission, 2025b</a>)</span>. Platforms’ own safety features, meanwhile, have been found wanting by independent testing, a finding the company disputes <span class="citation" data-cites="horwitz2025safety">(<a href="../references.html#ref-horwitz2025safety" role="doc-biblioref">Horwitz, 2025a</a>)</span>.</p>
+<p>These developments expose what might be called the <em>category problem</em>. Regulation and moderation work by naming categories of content, and the categories named so far (“eating-disorder content”, “unrealistic beauty standards”, “dieting”) are the body-image ones. The content that the pathways of <a href="#sec-ch4-pathways" class="quarto-xref"><span>Section 4.3</span></a> implicate (a video of someone choking, an influencer’s elimination diet for bloating, a list of “safe foods”) is mostly lawful, often well-meant and harmless item by item. If it carries risk, the risk lies in repetition and in the match between content and a particular user’s vulnerability. The simulation in <a href="#fig-ch4-bubble" class="quarto-xref">Figure&nbsp;<span>4.3</span></a> makes the same point formally: a cap on a named category protects only against what has been named. Design duties that act on the recommender itself (limiting reliance on implicit signals, interrupting repetition, offering feeds not based on profiling) apply whatever the content, and therefore reach ARFID-relevant material that category-based rules miss. This is the chapter’s main policy conclusion: <em>for ARFID, duties of design travel; duties of category do not.</em></p>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>For practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Ask about content, not hours.</strong> “What kind of videos do you end up watching about food?” is more informative than “How long are you online?”. Ask specifically about videos of choking, vomiting or “food scares”, gut-health and elimination advice, and “what I eat” or “safe food” content.</li>
+<li><strong>Ask parents where their advice comes from.</strong> Online feeding advice can push towards pressure or towards accommodation; both can maintain avoidance.</li>
+<li><strong>Do not assume body image.</strong> A young person can be exposed to appearance ideals without those ideals driving restriction. Ask why foods are avoided, not only which.</li>
+<li><strong>Treat communities as double-edged.</strong> Online groups can help people find a name for their difficulties and seek help, and can also consolidate a “safe-foods” identity. Explore what a young person takes from them.</li>
+<li><strong>Use platform controls that act on repetition.</strong> Resetting recommendations, choosing non-personalised feeds where available, and deliberately following varied, calm eating content are low-cost steps; they are reasonable, though untested for ARFID.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="sec-ch4-agenda" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec-ch4-agenda"><span class="header-section-number">4.6</span> A research agenda</h2>
+<p>The gap map points to six priorities, ordered by feasibility and by how much each would reduce uncertainty.</p>
+<ol type="1">
+<li><strong>Audits of recommendation chains seeded with ARFID-relevant interests.</strong> Sock-puppet accounts (adult personas first) that engage with fear-, sensory-, gut-health- and feeding-advice content, with pre-registered coding schemes and replication across platforms and countries; where possible, complemented by requests under Article 40 of the Digital Services Act <span class="citation" data-cites="eu2025dataaccess">(<a href="../references.html#ref-eu2025dataaccess" role="doc-biblioref">European Commission, 2025a</a>)</span>.</li>
+<li><strong>Content-specific media-diet modules in ARFID cohorts.</strong> The genetic and registry cohorts described in <a href="03-genes-environment.html#sec-ch3-genomes" class="quarto-xref"><span>Section 3.2</span></a>, and gastroenterology cohorts, could add brief measures of the content types in <a href="#tbl-gap-map" class="quarto-xref">Table&nbsp;<span>4.3</span></a>, making it possible to test whether exposure predicts onset or course while taking liability into account.</li>
+<li><strong>Experiments on vicarious fear learning with food stimuli.</strong> Adaptations of established paradigms <span class="citation" data-cites="reynolds2014effect dunne2018vicarious">(<a href="../references.html#ref-dunne2018vicarious" role="doc-biblioref">Dunne &amp; Askew, 2018</a>; <a href="../references.html#ref-reynolds2014effect" role="doc-biblioref">Reynolds et al., 2014</a>)</span> in adults, with positive-modelling conditions <span class="citation" data-cites="krause2022preventing">(<a href="../references.html#ref-krause2022preventing" role="doc-biblioref">Krause &amp; Askew, 2022</a>)</span>, to establish whether the mechanism extends from animals to food.</li>
+<li><strong>Content analyses of ARFID communities linked to outcomes.</strong> Building on <span class="citation" data-cites="greene2023visions">Greene et al. (<a href="../references.html#ref-greene2023visions" role="doc-biblioref">2023</a>)</span>, with linked surveys of help-seeking, self-identification and accommodation.</li>
+<li><strong>Vignette studies of diagnostic overshadowing.</strong> The same vignettes presented to clinicians, teachers, parents and large language models, varying presentation and the presence of body concern; this is the bridge to <a href="05-generative-ai-protocol.html" class="quarto-xref"><span>Chapter 5</span></a>.</li>
+<li><strong>Fairness audits of detection systems across presentations.</strong> Extending work on bias in automated detection <span class="citation" data-cites="solansnoguero2023gender dadamo2026detecting">(<a href="../references.html#ref-dadamo2026detecting" role="doc-biblioref">D’Adamo et al., 2026</a>; <a href="../references.html#ref-solansnoguero2023gender" role="doc-biblioref">Solans Noguero et al., 2023</a>)</span> to ask whether such systems can recognise restriction without weight concern at all.</li>
+</ol>
+<p>The next chapter takes up the fifth and sixth priorities directly. If generative AI is to help with early recognition, it must be designed so that it does not simply automate the streetlamp.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The body-image pathway is well established: social media use is associated with body-image concern and disordered eating, weakly for time spent and more strongly for appearance comparison and for specific content such as fitspiration and weight-loss advice.</li>
+<li>Within-person studies in adolescents find smaller and less consistent effects than between-person comparisons, a reminder that population associations do not describe every individual.</li>
+<li>Audits and an internal company study show that recommender systems deliver more eating-disorder-relevant content to young users who signal interest or vulnerability; whether this causes disorder onset is unknown.</li>
+<li>ARFID falls outside this evidence by definition. Of 14 PubMed records combining ARFID with social-media terms, none reported an ARFID-specific analysis of digital exposure; most used platforms only to recruit participants or disseminate findings.</li>
+<li>Seven candidate pathways (vicarious fear learning, gut-health advice, orthorexic ideals, online identity, diagnostic overshadowing, recommender amplification and parental information) are testable but mostly graded as hypotheses for ARFID.</li>
+<li>Content rules written for body image miss ARFID-relevant content. Design duties that act on the recommender itself (fewer implicit signals, less repetition, feeds not based on profiling) reach it.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-apa2022dsm5tr" class="csl-entry" role="listitem">
+American Psychiatric Association. (2022). <em>Diagnostic and statistical manual of mental disorders</em> (5th, text rev.). American Psychiatric Association Publishing. <a href="https://doi.org/10.1176/appi.books.9780890425787">https://doi.org/10.1176/appi.books.9780890425787</a>
+</div>
+<div id="ref-askew2008vicarious" class="csl-entry" role="listitem">
+Askew, C., &amp; Field, A. P. (2008). The vicarious learning pathway to fear 40 years on. <em>Clinical Psychology Review</em>, <em>28</em>(7), 1249–1265. <a href="https://doi.org/10.1016/j.cpr.2008.05.003">https://doi.org/10.1016/j.cpr.2008.05.003</a>
+</div>
+<div id="ref-atkins2026food" class="csl-entry" role="listitem">
+Atkins, M., Peterson, B., Staller, K., Kuo, B., Michael, B., Savage, M., Leonard, M. M., &amp; Burton-Murray, H. (2026). Avoidant/restrictive food intake disorder is common in adult and pediatric patients with celiac disease and non-celiac gluten sensitivity. <em>Nutrients</em>, <em>18</em>(10). <a href="https://doi.org/10.3390/nu18101585">https://doi.org/10.3390/nu18101585</a>
+</div>
+<div id="ref-barney2022food" class="csl-entry" role="listitem">
+Barney, A., Bruett, L. D., Forsberg, S., &amp; Nagata, J. M. (2022). Avoidant restrictive food intake disorder (<span>ARFID</span>) and body image: A case report. <em>Journal of Eating Disorders</em>, <em>10</em>(1), 61. <a href="https://doi.org/10.1186/s40337-022-00583-0">https://doi.org/10.1186/s40337-022-00583-0</a>
+</div>
+<div id="ref-bonfanti2025association" class="csl-entry" role="listitem">
+Bonfanti, R. C., Melchiori, F., Teti, A., Albano, G., Raffard, S., Rodgers, R., &amp; Lo Coco, G. (2025). The association between social comparison in social media, body image concerns and eating disorder symptoms: A systematic review and meta-analysis. <em>Body Image</em>, <em>52</em>, 101841. <a href="https://doi.org/10.1016/j.bodyim.2024.101841">https://doi.org/10.1016/j.bodyim.2024.101841</a>
+</div>
+<div id="ref-boswell2019prospects" class="csl-entry" role="listitem">
+Boswell, N., Byrne, R., &amp; Davies, P. S. W. (2019). Prospects for early childhood feeding interventions: An exploration of parent’s concerns and acceptability towards social media intervention opportunities. <em>Nutrition &amp; Dietetics</em>, <em>76</em>(4), 444–454. <a href="https://doi.org/10.1111/1747-0080.12502">https://doi.org/10.1111/1747-0080.12502</a>
+</div>
+<div id="ref-bulik2023arfid" class="csl-entry" role="listitem">
+Bulik, C. M., Micali, N., MacDermod, C. M., Qi, B., Munn-Chernoff, M. A., Thornton, L. M., White, J., Dinkler, L., Pisetsky, E. M., Johnson, J., Devine, K. R., Ortiz, S. N., Silverman, A. E., Berthold, N., Dumain, A., Guintivano, J., Halvorsen, M., &amp; Crowley, J. J. (2023). <span>ARFID</span> genes and environment (<span>ARFID</span>-GEN): Study protocol. <em>BMC Psychiatry</em>, <em>23</em>(1), 863. <a href="https://doi.org/10.1186/s12888-023-05266-x">https://doi.org/10.1186/s12888-023-05266-x</a>
+</div>
+<div id="ref-burrell2025survey" class="csl-entry" role="listitem">
+Burrell, T. L., Sharp, W. G., Gillespie, S., Pickard, K., Brasher, S., Buckley, D., &amp; Scahill, L. (2025). A survey of community providers on feeding problems in autism spectrum disorder. <em>Journal of Autism and Developmental Disorders</em>, <em>55</em>(6), 2000–2008. <a href="https://doi.org/10.1007/s10803-023-06013-7">https://doi.org/10.1007/s10803-023-06013-7</a>
+</div>
+<div id="ref-calvert2025social" class="csl-entry" role="listitem">
+Calvert, E., Cipriani, M., Dwyer, B., Lisowski, V., Mikkelson, J., Chen, K., Flathers, M., Hau, C., Xia, W., Castillo, J., Dhima, A., Ryan, S., &amp; Torous, J. (2025). Social media detox and youth mental health. <em>JAMA Network Open</em>, <em>8</em>(11), e2545245. <a href="https://doi.org/10.1001/jamanetworkopen.2025.45245">https://doi.org/10.1001/jamanetworkopen.2025.45245</a>
+</div>
+<div id="ref-celik2026validity" class="csl-entry" role="listitem">
+Çelik, Y. S., Okumuş, H. G., Öksüzoğlu, M. E., Kaşak, M., Solgun, G., Bryant-Waugh, R., &amp; Öğütlü, H. (2026). Validity and reliability of the pica, <span>ARFID</span> and rumination disorder interview-<span>ARFID</span> questionnaire (<span>PARDI-AR-Q</span>) in <span>Turkish</span> adolescents. <em>Journal of Eating Disorders</em>, <em>14</em>(1). <a href="https://doi.org/10.1186/s40337-026-01585-y">https://doi.org/10.1186/s40337-026-01585-y</a>
+</div>
+<div id="ref-ccdh2022deadly" class="csl-entry" role="listitem">
+Center for Countering Digital Hate. (2022). <em>Deadly by design: <span>TikTok</span> pushes harmful content promoting eating disorders and self-harm into users’ feeds</em>. Center for Countering Digital Hate. <a href="https://counterhate.com/wp-content/uploads/2022/12/CCDH-Deadly-by-Design_120922.pdf">https://counterhate.com/wp-content/uploads/2022/12/CCDH-Deadly-by-Design_120922.pdf</a>
+</div>
+<div id="ref-ccdh2024youtube" class="csl-entry" role="listitem">
+Center for Countering Digital Hate. (2024). <em><span>YouTube</span>’s anorexia algorithm: How <span>YouTube</span> recommends eating disorders videos to young girls</em>. Center for Countering Digital Hate. <a href="https://counterhate.com/research/youtube-anorexia-algorithm/">https://counterhate.com/research/youtube-anorexia-algorithm/</a>
+</div>
+<div id="ref-chu2024large" class="csl-entry" role="listitem">
+Chu, M. D., He, Z., Dorn, R., &amp; Lerman, K. (2024). <em>Large language models help reveal unhealthy diet and body concerns in online eating disorders communities</em>. arXiv preprint. <a href="https://doi.org/10.48550/ARXIV.2401.09647">https://doi.org/10.48550/ARXIV.2401.09647</a>
+</div>
+<div id="ref-costello2023algorithms" class="csl-entry" role="listitem">
+Costello, N., Sutton, R., Jones, M., Almassian, M., Raffoul, A., Ojumu, O., Salvia, M., Santoso, M., Kavanaugh, J. R., &amp; Austin, S. B. (2023). Algorithms, addiction, and adolescent mental health: An interdisciplinary study to inform state-level policy action to protect youth from the dangers of social media. <em>American Journal of Law &amp; Medicine</em>, <em>49</em>(2-3), 135–172. <a href="https://doi.org/10.1017/amj.2023.25">https://doi.org/10.1017/amj.2023.25</a>
+</div>
+<div id="ref-cunliffe2022lived" class="csl-entry" role="listitem">
+Cunliffe, L., Coulthard, H., &amp; Williamson, I. R. (2022). The lived experience of parenting a child with sensory sensitivity and picky eating. <em>Maternal &amp; Child Nutrition</em>, <em>18</em>(3), e13330. <a href="https://doi.org/10.1111/mcn.13330">https://doi.org/10.1111/mcn.13330</a>
+</div>
+<div id="ref-dadamo2026detecting" class="csl-entry" role="listitem">
+D’Adamo, L., Moussaoui, J. R., Chu, D., Graver, H., Taylor, C. B., Wilfley, D. E., Sadeh-Sharvit, S., Jacobson, N. C., Cavazos-Rehg, P., Manasse, S. M., Lerman, K., &amp; Fitzsimmons-Craft, E. E. (2026). Detecting eating disorders from social media content: What has been done and where do we go next? <em>International Journal of Eating Disorders</em>, <em>59</em>(1), 35–39. <a href="https://doi.org/10.1002/eat.24565">https://doi.org/10.1002/eat.24565</a>
+</div>
+<div id="ref-dane2023social" class="csl-entry" role="listitem">
+Dane, A., &amp; Bhatia, K. (2023). The social media diet: A scoping review to investigate the association between social media, body image and eating disorders amongst young people. <em>PLOS Global Public Health</em>, <em>3</em>(3), e0001091. <a href="https://doi.org/10.1371/journal.pgph.0001091">https://doi.org/10.1371/journal.pgph.0001091</a>
+</div>
+<div id="ref-digennaro2024scrolls" class="csl-entry" role="listitem">
+Digennaro, S., &amp; Tescione, A. (2024). Scrolls and self-perception, navigating the link between social networks and body dissatisfaction in preadolescents and adolescents: A systematic review. <em>Frontiers in Education</em>, <em>9</em>, 1390583. <a href="https://doi.org/10.3389/feduc.2024.1390583">https://doi.org/10.3389/feduc.2024.1390583</a>
+</div>
+<div id="ref-donini2022consensus" class="csl-entry" role="listitem">
+Donini, L. M., Barrada, J. R., Barthels, F., Dunn, T. M., Babeau, C., Brytek-Matera, A., Cena, H., Cerolini, S., Cho, H.-H., Coimbra, M., Cuzzolaro, M., Ferreira, C., Galfano, V., Grammatikopoulou, M. G., Hallit, S., Håman, L., Hay, P., Jimbo, M., Lasson, C., … Lombardo, C. (2022). A consensus document on definition and diagnostic criteria for orthorexia nervosa. <em>Eating and Weight Disorders</em>, <em>27</em>(8), 3695–3711. <a href="https://doi.org/10.1007/s40519-022-01512-5">https://doi.org/10.1007/s40519-022-01512-5</a>
+</div>
+<div id="ref-dunne2018vicarious" class="csl-entry" role="listitem">
+Dunne, G., &amp; Askew, C. (2018). Vicarious learning and reduction of fear in children via adult and child models. <em>Emotion</em>, <em>18</em>(4), 528–535. <a href="https://doi.org/10.1037/emo0000341">https://doi.org/10.1037/emo0000341</a>
+</div>
+<div id="ref-erraoui2025prevalence" class="csl-entry" role="listitem">
+Erraoui, I., Hamami, A., Elouali, A., Abdeladim, B., &amp; Rkain, M. (2025). Prevalence and characteristics of eating behavior disorders among children and adolescents. <em>Cureus</em>, <em>17</em>(6), e86586. <a href="https://doi.org/10.7759/cureus.86586">https://doi.org/10.7759/cureus.86586</a>
+</div>
+<div id="ref-esafety2026early" class="csl-entry" role="listitem">
+eSafety Commissioner. (2026a). <em>Early insights from <span class="nocase">eSafety</span>’s comprehensive evaluation project</em>. Media release, Australian Government. <a href="https://esafety.gov.au/newsroom/media-releases/early-insights-from-esafetys-comprehensive-evaluation-project">https://esafety.gov.au/newsroom/media-releases/early-insights-from-esafetys-comprehensive-evaluation-project</a>
+</div>
+<div id="ref-esafety2026platforms" class="csl-entry" role="listitem">
+eSafety Commissioner. (2026b). <em>Platforms restrict access to 4.7 million under-16 accounts across <span>Australia</span></em>. Media release, Australian Government. <a href="https://esafety.gov.au/newsroom/media-releases/platforms-restrict-access-to-47-million-under-16-accounts-across-australia">https://esafety.gov.au/newsroom/media-releases/platforms-restrict-access-to-47-million-under-16-accounts-across-australia</a>
+</div>
+<div id="ref-eu2025dataaccess" class="csl-entry" role="listitem">
+European Commission. (2025a). <em>Commission delegated regulation (<span>EU</span>) 2025/2050 supplementing regulation (<span>EU</span>) 2022/2065 by laying down the technical conditions and procedures under which providers of very large online platforms and of very large online search engines are to share data with vetted researchers</em>. <a href="https://eur-lex.europa.eu/eli/reg_del/2025/2050/oj">https://eur-lex.europa.eu/eli/reg_del/2025/2050/oj</a>
+</div>
+<div id="ref-ec2025minors" class="csl-entry" role="listitem">
+European Commission. (2025b). <em>Guidelines on measures to ensure a high level of privacy, safety and security for minors online, pursuant to article 28(4) of regulation (<span>EU</span>) 2022/2065</em>. Annex to the Communication to the Commission C(2025) 4764 final, 14 July 2025. <a href="https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors">https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors</a>
+</div>
+<div id="ref-eu2022dsa" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. (2022). <em>Regulation (<span>EU</span>) 2022/2065 on a single market for digital services and amending directive 2000/31/<span>EC</span> (digital services act)</em>. Official Journal of the European Union, L 277, 27 October 2022. <a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">https://eur-lex.europa.eu/eli/reg/2022/2065/oj</a>
+</div>
+<div id="ref-fioravanti2022exposure" class="csl-entry" role="listitem">
+Fioravanti, G., Bocci Benucci, S., Ceragioli, G., &amp; Casale, S. (2022). How the exposure to beauty ideals on social networking sites influences body image: A systematic review of experimental studies. <em>Adolescent Research Review</em>, <em>7</em>(3), 419–458. <a href="https://doi.org/10.1007/s40894-022-00179-4">https://doi.org/10.1007/s40894-022-00179-4</a>
+</div>
+<div id="ref-fisher2014characteristics" class="csl-entry" role="listitem">
+Fisher, M. M., Rosen, D. S., Ornstein, R. M., Mammel, K. A., Katzman, D. K., Rome, E. S., Callahan, S. T., Malizio, J., Kearney, S., &amp; Walsh, B. T. (2014). Characteristics of avoidant/restrictive food intake disorder in children and adolescents: A "new disorder" in <span>DSM</span>-5. <em>Journal of Adolescent Health</em>, <em>55</em>(1), 49–52. <a href="https://doi.org/10.1016/j.jadohealth.2013.11.013">https://doi.org/10.1016/j.jadohealth.2013.11.013</a>
+</div>
+<div id="ref-flack2026prevalence" class="csl-entry" role="listitem">
+Flack, R., Brownlow, G., Burton-Murray, H., Palsson, O., &amp; Aziz, I. (2026). The prevalence and burden of avoidant/restrictive food intake disorder symptoms in adults with disorders of gut-brain interaction: A population-based study. <em>Gastroenterology</em>, <em>170</em>(2), 365–374. <a href="https://doi.org/10.1053/j.gastro.2025.07.043">https://doi.org/10.1053/j.gastro.2025.07.043</a>
+</div>
+<div id="ref-golbeck2025recommender" class="csl-entry" role="listitem">
+Golbeck, J. (2025). Recommender system-induced eating disorder relapse: Harmful content and the challenges of responsible recommendation. <em>ACM Transactions on Intelligent Systems and Technology</em>, <em>16</em>(1), 1–13. <a href="https://doi.org/10.1145/3675404">https://doi.org/10.1145/3675404</a>
+</div>
+<div id="ref-greene2023visions" class="csl-entry" role="listitem">
+Greene, A. K., Norling, H. N., Brownstone, L. M., Maloul, E. K., Roe, C., &amp; Moody, S. (2023). Visions of recovery: A cross-diagnostic examination of eating disorder pro-recovery communities on <span>TikTok</span>. <em>Journal of Eating Disorders</em>, <em>11</em>(1), 109. <a href="https://doi.org/10.1186/s40337-023-00827-7">https://doi.org/10.1186/s40337-023-00827-7</a>
+</div>
+<div id="ref-hoek2025incidence" class="csl-entry" role="listitem">
+Hoek, H. W. (2025). The incidence and prevalence of eating disorders between 1975 and 2024: A commentary on lee and&nbsp;chi&nbsp;(2025). <em>International Journal of Eating Disorders</em>, <em>58</em>(10), 1893–1896. <a href="https://doi.org/10.1002/eat.24495">https://doi.org/10.1002/eat.24495</a>
+</div>
+<div id="ref-hog2025arfid" class="csl-entry" role="listitem">
+Hog, L., Fundin, B. T., Everett Palm, E., Billger, A., Bulik, C. M., Abbaspour, A., &amp; Dinkler, L. (2025). <span>ARFID</span> InitiativE <span>Sweden</span> (<span>ARIES</span>): Study protocol for a large-scale genetic and registry-linked cohort study on avoidant/restrictive food intake disorder. <em>BMJ Open</em>, <em>15</em>(4), e095559. <a href="https://doi.org/10.1136/bmjopen-2024-095559">https://doi.org/10.1136/bmjopen-2024-095559</a>
+</div>
+<div id="ref-holland2016systematic" class="csl-entry" role="listitem">
+Holland, G., &amp; Tiggemann, M. (2016). A systematic review of the impact of the use of social networking sites on body image and disordered eating outcomes. <em>Body Image</em>, <em>17</em>, 100–110. <a href="https://doi.org/10.1016/j.bodyim.2016.02.008">https://doi.org/10.1016/j.bodyim.2016.02.008</a>
+</div>
+<div id="ref-horwitz2025safety" class="csl-entry" role="listitem">
+Horwitz, J. (2025a). <em><span>Instagram</span>’s teen safety features are flawed, researchers say</em>. Reuters. <a href="https://www.reuters.com/business/instagrams-teen-safety-features-are-flawed-researchers-say-2025-09-25/">https://www.reuters.com/business/instagrams-teen-safety-features-are-flawed-researchers-say-2025-09-25/</a>
+</div>
+<div id="ref-horwitz2025instagram" class="csl-entry" role="listitem">
+Horwitz, J. (2025b). <em><span>Instagram</span> shows more <span>‘eating disorder adjacent’</span> content to vulnerable teens, internal <span>Meta</span> research shows</em>. Reuters. <a href="https://www.reuters.com/business/instagram-shows-more-eating-disorder-adjacent-content-vulnerable-teens-internal-2025-10-20/">https://www.reuters.com/business/instagram-shows-more-eating-disorder-adjacent-content-vulnerable-teens-internal-2025-10-20/</a>
+</div>
+<div id="ref-ioannidis2021problematic" class="csl-entry" role="listitem">
+Ioannidis, K., Taylor, C., Holt, L., Brown, K., Lochner, C., Fineberg, N. A., Corazza, O., Chamberlain, S. R., Roman-Urrestarazu, A., &amp; Czabanowska, K. (2021). Problematic usage of the internet and eating disorder and related psychopathology: A multifaceted, systematic review and meta-analysis. <em>Neuroscience and Biobehavioral Reviews</em>, <em>125</em>, 569–581. <a href="https://doi.org/10.1016/j.neubiorev.2021.03.005">https://doi.org/10.1016/j.neubiorev.2021.03.005</a>
+</div>
+<div id="ref-jansen2017directional" class="csl-entry" role="listitem">
+Jansen, P. W., Barse, L. M. de, Jaddoe, V. W. V., Verhulst, F. C., Franco, O. H., &amp; Tiemeier, H. (2017). Bi-directional associations between child fussy eating and parents’ pressure to eat: Who influences whom? <em>Physiology &amp; Behavior</em>, <em>176</em>, 101–106. <a href="https://doi.org/10.1016/j.physbeh.2017.02.015">https://doi.org/10.1016/j.physbeh.2017.02.015</a>
+</div>
+<div id="ref-spain2018lopdgdd" class="csl-entry" role="listitem">
+Jefatura del Estado. (2018). <em>Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales</em>. Boletín Oficial del Estado, 294, 6 December 2018. <a href="https://www.boe.es/eli/es/lo/2018/12/05/3/con">https://www.boe.es/eli/es/lo/2018/12/05/3/con</a>
+</div>
+<div id="ref-jeronimo2022effects" class="csl-entry" role="listitem">
+Jerónimo, F., &amp; Carraça, E. V. (2022). Effects of fitspiration content on body image: A systematic review. <em>Eating and Weight Disorders</em>, <em>27</em>(8), 3017–3035. <a href="https://doi.org/10.1007/s40519-022-01505-4">https://doi.org/10.1007/s40519-022-01505-4</a>
+</div>
+<div id="ref-jimenezgarcia2025impact" class="csl-entry" role="listitem">
+Jiménez-García, A. M., Arias, N., Hontanaya, E. P., Sanz, A., &amp; García-Velasco, O. (2025). Impact of body-positive social media content on body image perception. <em>Journal of Eating Disorders</em>, <em>13</em>(1), 153. <a href="https://doi.org/10.1186/s40337-025-01286-y">https://doi.org/10.1186/s40337-025-01286-y</a>
+</div>
+<div id="ref-krause2022preventing" class="csl-entry" role="listitem">
+Krause, L., &amp; Askew, C. (2022). Preventing and reducing fear using positive modelling: A systematic review of experimental research with children. <em>Behaviour Research and Therapy</em>, <em>148</em>, 103992. <a href="https://doi.org/10.1016/j.brat.2021.103992">https://doi.org/10.1016/j.brat.2021.103992</a>
+</div>
+<div id="ref-kvardova2025navigating" class="csl-entry" role="listitem">
+Kvardova, N., Machackova, H., Maes, C., &amp; Vandenbosch, L. (2025). Navigating beauty standards on social media: Impact of appearance activity on adolescents’ body dissatisfaction. <em>Journal of Youth and Adolescence</em>, <em>54</em>(8), 1999–2018. <a href="https://doi.org/10.1007/s10964-025-02159-y">https://doi.org/10.1007/s10964-025-02159-y</a>
+</div>
+<div id="ref-ladwig2024risks" class="csl-entry" role="listitem">
+Ladwig, G., Tanck, J. A., Quittkat, H. L., &amp; Vocks, S. (2024). Risks and benefits of social media trends: The influence of "fitspiration", "body positivity", and text-based "body neutrality" on body dissatisfaction and affect in women with and without eating disorders. <em>Body Image</em>, <em>50</em>, 101749. <a href="https://doi.org/10.1016/j.bodyim.2024.101749">https://doi.org/10.1016/j.bodyim.2024.101749</a>
+</div>
+<div id="ref-vanderlinden2026social" class="csl-entry" role="listitem">
+Linden, S. van der. (2026). Social media bans for teens lack evidence. <em>Nature Health</em>. <a href="https://doi.org/10.1038/s44360-026-00083-4">https://doi.org/10.1038/s44360-026-00083-4</a>
+</div>
+<div id="ref-logrieco2021paradox" class="csl-entry" role="listitem">
+Logrieco, G., Marchili, M. R., Roversi, M., &amp; Villani, A. (2021). The paradox of <span>Tik Tok</span> anti-pro-anorexia videos: How social media can promote non-suicidal self-injury and anorexia. <em>International Journal of Environmental Research and Public Health</em>, <em>18</em>(3). <a href="https://doi.org/10.3390/ijerph18031041">https://doi.org/10.3390/ijerph18031041</a>
+</div>
+<div id="ref-mazzeo2024mitigating" class="csl-entry" role="listitem">
+Mazzeo, S. E., Weinstock, M., Vashro, T. N., Henning, T., &amp; Derrigo, K. (2024). Mitigating harms of social media for adolescent body image and eating disorders: A review. <em>Psychology Research and Behavior Management</em>, <em>17</em>, 2587–2601. <a href="https://doi.org/10.2147/PRBM.S410600">https://doi.org/10.2147/PRBM.S410600</a>
+</div>
+<div id="ref-mclean2016does" class="csl-entry" role="listitem">
+McLean, S. A., Paxton, S. J., &amp; Wertheim, E. H. (2016). Does media literacy mitigate risk for reduced body satisfaction following exposure to thin-ideal media? <em>Journal of Youth and Adolescence</em>, <em>45</em>(8), 1678–1695. <a href="https://doi.org/10.1007/s10964-016-0440-3">https://doi.org/10.1007/s10964-016-0440-3</a>
+</div>
+<div id="ref-meta2024people" class="csl-entry" role="listitem">
+Meta Platforms. (2024). <em>People disagree content seen by teens reporting different levels of body dissatisfaction after viewing content on <span>IG</span>: Directional estimated group differences from content analysis with wave 1 <span>MYST</span> data</em>. Meta Platforms, internal research report (redacted replica published by Reuters, October 2025).
+</div>
+<div id="ref-munro2024diet" class="csl-entry" role="listitem">
+Munro, E., Wells, G., Paciente, R., Wickens, N., Ta, D., Mandzufas, J., Lombardi, K., &amp; Woolard, A. (2024). Diet culture on <span>TikTok</span>: A descriptive content analysis. <em>Public Health Nutrition</em>, <em>27</em>(1), e169. <a href="https://doi.org/10.1017/S1368980024001381">https://doi.org/10.1017/S1368980024001381</a>
+</div>
+<div id="ref-nawaz2024social" class="csl-entry" role="listitem">
+Nawaz, F. A., Riaz, M. M. A., Banday, N. U. A., Singh, A., Arshad, Z., Derby, H., &amp; Sultan, M. A. (2024). Social media use among adolescents with eating disorders: A double-edged sword. <em>Frontiers in Psychiatry</em>, <em>15</em>, 1300182. <a href="https://doi.org/10.3389/fpsyt.2024.1300182">https://doi.org/10.3389/fpsyt.2024.1300182</a>
+</div>
+<div id="ref-perezjimenez2025social" class="csl-entry" role="listitem">
+Peréz-Jiménez, M., Uclés-Torrente, M. D. M., Ruiz-Gamarra, G. E., Vaquero-Álvarez, M., Blancas-Sánchez, I. M., Aparicio-Martínez, P., &amp; Vaquero-Abellán, M. (2025). Social media consumption and risk of addiction associated with adolescent disordered eating behaviour: An observational analysis. <em>Nutrients</em>, <em>17</em>(18). <a href="https://doi.org/10.3390/nu17183017">https://doi.org/10.3390/nu17183017</a>
+</div>
+<div id="ref-resetaustralia2022designing" class="csl-entry" role="listitem">
+Reset Australia. (2022). <em>Designing for disorder: <span>Instagram</span>’s pro-eating disorder bubble in <span>Australia</span></em>. Reset Australia. <a href="https://au.reset.tech/uploads/insta-pro-eating-disorder-bubble-april-22-1.pdf">https://au.reset.tech/uploads/insta-pro-eating-disorder-bubble-april-22-1.pdf</a>
+</div>
+<div id="ref-reynolds2014effect" class="csl-entry" role="listitem">
+Reynolds, G., Field, A. P., &amp; Askew, C. (2014). Effect of vicarious fear learning on children’s heart rate responses and attentional bias for novel animals. <em>Emotion</em>, <em>14</em>(5), 995–1006. <a href="https://doi.org/10.1037/a0037225">https://doi.org/10.1037/a0037225</a>
+</div>
+<div id="ref-reynolds2017learning" class="csl-entry" role="listitem">
+Reynolds, G., Field, A. P., &amp; Askew, C. (2017). Learning to fear a second-order stimulus following vicarious learning. <em>Cognition and Emotion</em>, <em>31</em>(3), 572–579. <a href="https://doi.org/10.1080/02699931.2015.1116978">https://doi.org/10.1080/02699931.2015.1116978</a>
+</div>
+<div id="ref-rodan2025prescription" class="csl-entry" role="listitem">
+Rodan, S.-C., Maguire, S., Meez, N., Greenstien, K., Zartarian, G., Mills, K. L., Suraev, A., Bedoya-Pérez, M. A., &amp; McGregor, I. S. (2025). Prescription and nonprescription drug use among people with eating disorders. <em>JAMA Network Open</em>, <em>8</em>(7), e2522406. <a href="https://doi.org/10.1001/jamanetworkopen.2025.22406">https://doi.org/10.1001/jamanetworkopen.2025.22406</a>
+</div>
+<div id="ref-ruizfischer2024tradeoff" class="csl-entry" role="listitem">
+Ruiz Fischer, M. M., &amp; Starr, R. A. (2024). A tradeoff between safety and freedom: Adults’ lived experiences of <span>ARFID</span>. <em>Journal of Eating Disorders</em>, <em>12</em>(1), 107. <a href="https://doi.org/10.1186/s40337-024-01071-3">https://doi.org/10.1186/s40337-024-01071-3</a>
+</div>
+<div id="ref-sailer2025amygdala" class="csl-entry" role="listitem">
+Sailer, C. O., Galbiati, F., Holsen, L. M., Palmer, L., Van De Water, A. L., Deckersbach, T., Pulumo, R., Becker, K. K., Breithaupt, L., Fisher, M., Asanza, E., Hadjikhani, N., Misra, M., Eddy, K., Micali, N., Lawson, E. A., &amp; Thomas, J. J. (2025). Amygdala and insula activation in youth with avoidant/restrictive food intake disorder in response to aversive food-specific fear images. <em>Psychological Medicine</em>, <em>55</em>, e374. <a href="https://doi.org/10.1017/S0033291725102766">https://doi.org/10.1017/S0033291725102766</a>
+</div>
+<div id="ref-salameh2024mediating" class="csl-entry" role="listitem">
+Salameh, G., El Khoury, N., Hallit, R., Malaeb, D., Sakr, F., Dabbous, M., Fekih-Romdhane, F., Obeid, S., &amp; Hallit, S. (2024). The mediating effect of dysmorphic concern in the association between avoidant restrictive food intake disorder and suicidal ideation in adults. <em>BMC Psychiatry</em>, <em>24</em>(1), 42. <a href="https://doi.org/10.1186/s12888-023-05490-5">https://doi.org/10.1186/s12888-023-05490-5</a>
+</div>
+<div id="ref-samuel2024therapytok" class="csl-entry" role="listitem">
+Samuel, L., Kuijpers, K., &amp; Bleakley, A. (2024). TherapyTok for depression and anxiety: A quantitative content analysis of high engagement <span>TikTok</span> videos. <em>Journal of Adolescent Health</em>, <em>74</em>(6), 1184–1190. <a href="https://doi.org/10.1016/j.jadohealth.2024.02.002">https://doi.org/10.1016/j.jadohealth.2024.02.002</a>
+</div>
+<div id="ref-sanzari2023impact" class="csl-entry" role="listitem">
+Sanzari, C. M., Gorrell, S., Anderson, L. M., Reilly, E. E., Niemiec, M. A., Orloff, N. C., Anderson, D. A., &amp; Hormes, J. M. (2023). The impact of social media use on body image and disordered eating behaviors: Content matters more than duration of exposure. <em>Eating Behaviors</em>, <em>49</em>, 101722. <a href="https://doi.org/10.1016/j.eatbeh.2023.101722">https://doi.org/10.1016/j.eatbeh.2023.101722</a>
+</div>
+<div id="ref-schreurs2022different" class="csl-entry" role="listitem">
+Schreurs, L., &amp; Vandenbosch, L. (2022). Different interactions with appearance-focused social media content and adolescents’ body dissatisfaction: A within-person perspective. <em>Computers in Human Behavior</em>, <em>135</em>, 107364. <a href="https://doi.org/10.1016/j.chb.2022.107364">https://doi.org/10.1016/j.chb.2022.107364</a>
+</div>
+<div id="ref-shimshoni2020space" class="csl-entry" role="listitem">
+Shimshoni, Y., Silverman, W. K., &amp; Lebowitz, E. R. (2020). SPACE-<span>ARFID</span>: A pilot trial of a novel parent-based treatment for avoidant/restrictive food intake disorder. <em>International Journal of Eating Disorders</em>, <em>53</em>(10), 1623–1635. <a href="https://doi.org/10.1002/eat.23341">https://doi.org/10.1002/eat.23341</a>
+</div>
+<div id="ref-solansnoguero2023gender" class="csl-entry" role="listitem">
+Solans Noguero, D., Ramírez-Cifuentes, D., Ríssola, E. A., &amp; Freire, A. (2023). Gender bias when using artificial intelligence to assess anorexia nervosa on social media: Data-driven study. <em>Journal of Medical Internet Research</em>, <em>25</em>, e45184. <a href="https://doi.org/10.2196/45184">https://doi.org/10.2196/45184</a>
+</div>
+<div id="ref-tan2026multilevel" class="csl-entry" role="listitem">
+Tan, P. Y., Yiga, P., Bao, Y., Gong, Y. Y., Ma, R., Ensaff, H., Yang, M., Chen, J., Huang, J., Yang, Z., Wang, O., Huo, J., Ding, G., Gong, Z., &amp; Lin, X. (2026). Multilevel factors influencing parental food decision-making across childhood stages in <span>China</span>: A qualitative study using a socioecological framework. <em>BMJ Public Health</em>, <em>4</em>(3), e004433. <a href="https://doi.org/10.1136/bmjph-2025-004433">https://doi.org/10.1136/bmjph-2025-004433</a>
+</div>
+<div id="ref-tiggemann2020social" class="csl-entry" role="listitem">
+Tiggemann, M., &amp; Anderberg, I. (2020). Social media is not real: The effect of <span>‘<span>Instagram</span> vs reality’</span> images on women’s social comparison and body image. <em>New Media &amp; Society</em>, <em>22</em>(12), 2183–2199. <a href="https://doi.org/10.1177/1461444819888720">https://doi.org/10.1177/1461444819888720</a>
+</div>
+<div id="ref-vintroalcaraz2026idealized" class="csl-entry" role="listitem">
+Vintró-Alcaraz, C., Ballero Reque, C., Paslakis, G., &amp; Testa, G. (2026). Idealized body images and fitness lifestyles on social media: A systematic review exploring the link between social media use and symptoms of orthorexia nervosa and muscle dysmorphia. <em>European Eating Disorders Review</em>, <em>34</em>(1), 256–280. <a href="https://doi.org/10.1002/erv.70027">https://doi.org/10.1002/erv.70027</a>
+</div>
+<div id="ref-vuong2021social" class="csl-entry" role="listitem">
+Vuong, A. T., Jarman, H. K., Doley, J. R., &amp; McLean, S. A. (2021). Social media use and body dissatisfaction in adolescents: The moderating role of thin- and muscular-ideal internalisation. <em>International Journal of Environmental Research and Public Health</em>, <em>18</em>(24). <a href="https://doi.org/10.3390/ijerph182413222">https://doi.org/10.3390/ijerph182413222</a>
+</div>
+<div id="ref-wu2024digging" class="csl-entry" role="listitem">
+Wu, Y., Kemps, E., &amp; Prichard, I. (2024). Digging into digital buffets: A systematic review of eating-related social media content and its relationship with body image and eating behaviours. <em>Body Image</em>, <em>48</em>, 101650. <a href="https://doi.org/10.1016/j.bodyim.2023.101650">https://doi.org/10.1016/j.bodyim.2023.101650</a>
+</div>
+<div id="ref-yin2023risk" class="csl-entry" role="listitem">
+Yin, T., Tu, W., Li, Y., Yang, M., Huang, L., Zhang, S., &amp; Xu, G. (2023). Risk of avoidant/restrictive food intake disorder in patients with inflammatory bowel disease: Predictive value of disease phenotype, disease activity and food literacy. <em>Journal of Eating Disorders</em>, <em>11</em>(1), 211. <a href="https://doi.org/10.1186/s40337-023-00936-3">https://doi.org/10.1186/s40337-023-00936-3</a>
+</div>
+<div id="ref-yoshimura2023case" class="csl-entry" role="listitem">
+Yoshimura, A., Kusama, Y., Omura, Y., Shibata, M., &amp; Maihara, T. (2023). A case of eating disorder diagnosed as orthorexia nervosa. <em>Cureus</em>, <em>15</em>(1), e33801. <a href="https://doi.org/10.7759/cureus.33801">https://doi.org/10.7759/cureus.33801</a>
+</div>
+<div id="ref-zhang2021relationship" class="csl-entry" role="listitem">
+Zhang, J., Wang, Y., Li, Q., &amp; Wu, C. (2021). The relationship between <span>SNS</span> usage and disordered eating behaviors: A meta-analysis. <em>Frontiers in Psychology</em>, <em>12</em>, 641919. <a href="https://doi.org/10.3389/fpsyg.2021.641919">https://doi.org/10.3389/fpsyg.2021.641919</a>
+</div>
+<div id="ref-zickgraf2025broadening" class="csl-entry" role="listitem">
+Zickgraf, H. F., &amp; Schwartz, R. A. (2025). Broadening the conceptualization of panic disorder to include the fear presentation of avoidant/restrictive food intake disorder: The legacy of panic control therapy. <em>Behaviour Research and Therapy</em>, <em>185</em>, 104677. <a href="https://doi.org/10.1016/j.brat.2024.104677">https://doi.org/10.1016/j.brat.2024.104677</a>
+</div>
+<div id="ref-zieba2025awareness" class="csl-entry" role="listitem">
+Zięba, M., Jaskuła, M., &amp; Lachowicz-Wiśniewska, S. (2025). Awareness of eating disorders, nutritional knowledge, and emotionally driven eating among <span>Polish</span> adolescents aged 15-17-a pilot study. <em>Nutrients</em>, <em>17</em>(12). <a href="https://doi.org/10.3390/nu17121994">https://doi.org/10.3390/nu17121994</a>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<div class="rd-controls" role="toolbar" aria-label="Reading options">
+  <button type="button" data-theme="light" aria-pressed="false" aria-label="Light theme" title="Light theme">
+    <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+  </button>
+  <button type="button" data-theme="sepia" aria-pressed="false" aria-label="Sepia theme" title="Sepia theme">
+    <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5C5.5 4.5 8.5 4.5 12 6.5c3.5-2 6.5-2 9-1v13c-2.5-1-5.5-1-9 1-3.5-2-6.5-2-9-1z"></path><path d="M12 6.5v13"></path></svg>
+  </button>
+  <button type="button" data-theme="dark" aria-pressed="false" aria-label="Dark theme" title="Dark theme">
+    <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg>
+  </button>
+  <span class="rd-sep" aria-hidden="true"></span>
+  <button type="button" data-scale="-1" aria-label="Smaller text" title="Smaller text">A−</button>
+  <span class="rd-scale-out" aria-live="polite">100%</span>
+  <button type="button" data-scale="1" aria-label="Larger text" title="Larger text">A+</button>
+  <button type="button" data-scale="0" aria-label="Reset text size" title="Reset text size">
+    <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v4h4"></path></svg>
+  </button>
+</div>
+<script>
+(function () {
+  var root = document.documentElement;
+  var bar = document.querySelector('.rd-controls');
+  if (!bar) return;
+  var MIN = 0.85, MAX = 1.45, STEP = 0.075;
+  function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function currentScale() {
+    var v = parseFloat(getComputedStyle(root).getPropertyValue('--rd-scale'));
+    return isNaN(v) ? 1 : v;
+  }
+  function paint() {
+    var t = root.getAttribute('data-reading') || 'light';
+    bar.querySelectorAll('[data-theme]').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-theme') === t ? 'true' : 'false');
+    });
+    bar.querySelector('.rd-scale-out').textContent = Math.round(currentScale() * 100) + '%';
+  }
+  bar.addEventListener('click', function (ev) {
+    var b = ev.target.closest('button');
+    if (!b) return;
+    if (b.hasAttribute('data-theme')) {
+      var t = b.getAttribute('data-theme');
+      root.setAttribute('data-reading', t);
+      store('rd-theme', t);
+    } else if (b.hasAttribute('data-scale')) {
+      var d = parseInt(b.getAttribute('data-scale'), 10);
+      var s = d === 0 ? 1 : Math.min(MAX, Math.max(MIN, currentScale() + d * STEP));
+      s = Math.round(s * 1000) / 1000;
+      root.style.setProperty('--rd-scale', String(s));
+      store('rd-scale', String(s));
+    }
+    paint();
+  });
+  paint();
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/03-genes-environment.html" class="pagination-link" aria-label="Seed and soil: genetic and environmental determinants">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Seed and soil: genetic and environmental determinants</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/05-generative-ai-protocol.html" class="pagination-link" aria-label="Scribe, not judge: generative AI for early recognition and referral">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Scribe, not judge: generative AI for early recognition and referral</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Miguel Moreno Muñoz · Draft — not for citation</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This book does not provide diagnosis. If you are worried, see <a href="../worried.html">If you are worried</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

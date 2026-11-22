@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Miguel Moreno Muñoz">
+<meta name="dcterms.date" content="2026-11-22">
+
+<title>Beyond Body Image</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./worried.html" rel="next">
+<link href="./assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-87594f40d5751d395fd74f8deb6194b2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap">
+<meta name="theme-color" content="#1F5F74">
+<script>
+/* PNG favicons, resolved against Quarto's page offset so they work in sub-folders and offline. */
+document.addEventListener('DOMContentLoaded', function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var off = m ? m.getAttribute('content') : './';
+  [['icon', 'image/png', '32x32', 'favicon-32.png'],
+   ['icon', 'image/png', '192x192', 'favicon-192.png'],
+   ['apple-touch-icon', 'image/png', '180x180', 'apple-touch-icon.png']].forEach(function (d) {
+    var l = document.createElement('link');
+    l.rel = d[0]; l.type = d[1]; l.setAttribute('sizes', d[2]); l.href = off + 'assets/icons/' + d[3];
+    document.head.appendChild(l);
+  });
+});
+</script>
+<script>
+/* Apply the stored reading preferences before first paint (avoids a flash of the light theme). */
+(function () {
+  var theme = null, scale = null;
+  try { theme = localStorage.getItem('rd-theme'); scale = localStorage.getItem('rd-scale'); } catch (e) {}
+  if (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+  var root = document.documentElement;
+  root.setAttribute('data-reading', theme === 'dark' || theme === 'sepia' ? theme : 'light');
+  var s = parseFloat(scale);
+  if (s >= 0.85 && s <= 1.45) root.style.setProperty('--rd-scale', String(s));
+})();
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Beyond Body Image</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./worried.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">If you are worried · Si te preocupa</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I · The landscape</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapters/01-context-prevalence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Counting a moving target: context and prevalence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapters/02-related-disorders.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A family of difficulties: related disorders, ages and groups</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapters/03-genes-environment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Seed and soil: genetic and environmental determinants</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II · Digital environments and generative AI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapters/04-digital-environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Digital soil: social platforms, recommender systems and ARFID</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapters/05-generative-ai-protocol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Scribe, not judge: generative AI for early recognition and referral</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./toolkit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interactive toolkit</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./epilogue.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Epilogue: seeing what the frame leaves out</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Glossary · Glosario</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <ul class="collapse">
+  <li><a href="#what-this-book-is" id="toc-what-this-book-is" class="nav-link" data-scroll-target="#what-this-book-is">What this book is</a></li>
+  <li><a href="#why-beyond-body-image" id="toc-why-beyond-body-image" class="nav-link" data-scroll-target="#why-beyond-body-image">Why “beyond body image”</a></li>
+  <li><a href="#three-ways-to-read-it" id="toc-three-ways-to-read-it" class="nav-link" data-scroll-target="#three-ways-to-read-it">Three ways to read it</a></li>
+  <li><a href="#conventions" id="toc-conventions" class="nav-link" data-scroll-target="#conventions">Conventions</a></li>
+  <li><a href="#what-this-book-is-not" id="toc-what-this-book-is-not" class="nav-link" data-scroll-target="#what-this-book-is-not">What this book is not</a></li>
+  <li><a href="#how-this-book-was-made" id="toc-how-this-book-was-made" class="nav-link" data-scroll-target="#how-this-book-was-made">How this book was made</a></li>
+  <li><a href="#reproducibility-licence-and-citation" id="toc-reproducibility-licence-and-citation" class="nav-link" data-scroll-target="#reproducibility-licence-and-citation">Reproducibility, licence and citation</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Beyond Body Image</h1>
+<p class="subtitle lead">Environmental Factors in Feeding and Eating Disorders, with a Focus on ARFID, and an LLM-Assisted Protocol for Early Recognition and Referral</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Miguel Moreno Muñoz <a href="mailto:mm3@ugr.es" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0002-0746-9587" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Universidad de Granada
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">22 November 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+<section id="preface" class="level1 unnumbered">
+<h1 class="unnumbered">Preface</h1><p><img src="assets/cover.svg" title="Beyond Body Image" class="quarto-cover-image nolightbox img-fluid" alt="Book cover: three open arcs forming an incomplete circle, standing for the three ARFID presentations, under the title Beyond Body Image."></p>
+<div class="draft-flag">
+<p>Version 0.9 · pre-review draft · 22 November 2026. All chapters are drafted in full and every citation resolves to a verified entry in <code>references.bib</code>, but the book has not yet been peer reviewed, and the toolkit has not yet been evaluated (see <a href="chapters/05-generative-ai-protocol.html#sec-ch5-evaluation" class="quarto-xref"><span>Evaluation protocol</span></a>). Items marked <strong>TODO</strong> still need a decision by the author.</p>
+</div>
+<section id="what-this-book-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-book-is">What this book is</h2>
+<p>This book does three things at once. It is an <strong>academic essay</strong> on the environmental conditions in which feeding and eating disorders arise in adolescence. It is a <strong>practical guide</strong> for health and education professionals. And it offers an <strong>interactive toolkit</strong>: a set of calibrated prompt sequences for large language models (LLMs) that help adults <em>organise what they have noticed</em> and <em>take it to the right professional</em>.</p>
+<p>Its focus is avoidant/restrictive food intake disorder (ARFID). ARFID was added to the diagnostic manuals in 2013 <span class="citation" data-cites="apa2022dsm5tr">(<a href="references.html#ref-apa2022dsm5tr" role="doc-biblioref">American Psychiatric Association, 2022</a>)</span>, and it does not fit the story that dominates public debate on young people, social media and eating. That story is about body image. ARFID, by definition, is not.</p>
+</section>
+<section id="why-beyond-body-image" class="level2">
+<h2 class="anchored" data-anchor-id="why-beyond-body-image">Why “beyond body image”</h2>
+<p>Most research and policy on social media and eating disorders follows a single pathway: exposure to appearance ideals, social comparison, body dissatisfaction, then restriction <span class="citation" data-cites="holland2016systematic dane2023social">(<a href="references.html#ref-dane2023social" role="doc-biblioref">Dane &amp; Bhatia, 2023</a>; <a href="references.html#ref-holland2016systematic" role="doc-biblioref">Holland &amp; Tiggemann, 2016</a>)</span>. The pathway is real and well documented. It is also partial. Children and adolescents can restrict food for reasons that have nothing to do with their bodies: food can feel or taste intolerable, eating can hold no interest, or a single frightening episode of choking or vomiting can make eating feel unsafe <span class="citation" data-cites="zickgraf2018initial bryantwaugh2022preliminary">(<a href="references.html#ref-bryantwaugh2022preliminary" role="doc-biblioref">Bryant-Waugh et al., 2022</a>; <a href="references.html#ref-zickgraf2018initial" role="doc-biblioref">Zickgraf &amp; Ellis, 2018</a>)</span>.</p>
+<p>Instruments built to detect weight and shape concerns are, in this respect, like smoke detectors in a house with a gas leak: sensitive, reliable and silent about the hazard that matters. In a validation study with Turkish adolescents, ARFID subscales were largely unrelated to weight- and shape-related eating attitudes <span class="citation" data-cites="celik2026validity">(<a href="references.html#ref-celik2026validity" role="doc-biblioref">Çelik et al., 2026</a>)</span>. This book asks what follows, scientifically and practically, when we take that silence seriously.</p>
+</section>
+<section id="three-ways-to-read-it" class="level2">
+<h2 class="anchored" data-anchor-id="three-ways-to-read-it">Three ways to read it</h2>
+<div id="tbl-reading-paths" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-reading-paths-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Reading paths through the book
+</figcaption>
+<div aria-describedby="tbl-reading-paths-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">If you are…</th>
+<th style="text-align: left;">Start with</th>
+<th style="text-align: left;">Then</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A researcher or student</td>
+<td style="text-align: left;">Introduction and Chapters 1–3</td>
+<td style="text-align: left;">Chapter 4 (evidence-gap map) and Chapter 5 (protocol design)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A health or education professional</td>
+<td style="text-align: left;">Chapter 2 (presentations and risk groups)</td>
+<td style="text-align: left;">The <a href="./toolkit.html">toolkit</a> and Chapter 5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A parent, carer or young person who is worried</td>
+<td style="text-align: left;"><a href="./worried.html">If you are worried</a></td>
+<td style="text-align: left;">The plain-language summaries at the start of each chapter</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A translator or terminologist</td>
+<td style="text-align: left;">The <a href="./glossary.html">Glossary</a></td>
+<td style="text-align: left;">The note on Spanish names in <a href="chapters/01-context-prevalence.html" class="quarto-xref"><span>1&nbsp; Counting a moving target: context and prevalence</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="conventions" class="level2">
+<h2 class="anchored" data-anchor-id="conventions">Conventions</h2>
+<ul>
+<li>Each chapter opens with an <strong>In plain words</strong> box: a short summary in accessible language.</li>
+<li>Claims about the evidence carry a grade where the evidence is thin or contested: <span class="ev ev-e1">E1</span> systematic or meta-analytic evidence; <span class="ev ev-e2">E2</span> several consistent primary studies; <span class="ev ev-e3">E3</span> single studies, case reports or cross-sectional associations; <span class="ev ev-h">H</span> hypothesis with mechanistic plausibility only.</li>
+<li>Clinical terms are given in British English, with Spanish equivalents in the <a href="./glossary.html">Glossary</a>.</li>
+<li>Every figure states its source in author–date form. Simulations are labelled as such; their code can be unfolded beneath the text, and the numbers quoted from them are computed when the book is rendered.</li>
+<li>Searches and web sources are dated. Helplines on the <a href="./worried.html">If you are worried</a> page were checked on the date shown there.</li>
+<li>Following safe-communication practice, the book gives <strong>no figures for weight, calories or portions</strong>, and <strong>no images of bodies</strong>.</li>
+</ul>
+</section>
+<section id="what-this-book-is-not" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-book-is-not">What this book is not</h2>
+<p>It is not a diagnostic instrument and does not replace assessment by a qualified professional. The toolkit does not score, label or store anything. Software that is intended to support diagnostic decisions falls under medical-device regulation in the European Union <span class="citation" data-cites="eu2017mdr">(<a href="references.html#ref-eu2017mdr" role="doc-biblioref">European Parliament and Council of the European Union, 2017</a>)</span>; this book deliberately stays on the other side of that line.</p>
+</section>
+<section id="how-this-book-was-made" class="level2">
+<h2 class="anchored" data-anchor-id="how-this-book-was-made">How this book was made</h2>
+<p>The book was written with the assistance of a large language model, used for literature retrieval, drafting, data analysis and code, and for the bilingual terminology work shared with the <em>translat-ia</em> workshop. Every source was checked against its primary record, bibliographic metadata for indexed articles were generated programmatically from PubMed, and the author takes full responsibility for the content. The same principle the book applies to its toolkit (the model as scribe, not judge) applied to its writing. TODO (author): confirm or revise this statement to match the publisher’s policy on AI-assisted authorship.</p>
+</section>
+<section id="reproducibility-licence-and-citation" class="level2">
+<h2 class="anchored" data-anchor-id="reproducibility-licence-and-citation">Reproducibility, licence and citation</h2>
+<p>The book is written in Quarto and R. Its text, bibliography, figure code, toolkit and verification log are intended for deposit in a public repository with a persistent identifier.</p>
+<ul>
+<li>Repository: TODO (GitHub URL).</li>
+<li>Archived version and DOI: TODO (Zenodo).</li>
+<li>Licence: TODO (author’s decision; for example, one licence for the text and another for the code).</li>
+<li>Suggested citation: Moreno Muñoz, M. (2026). <em>Beyond body image: Environmental factors in feeding and eating disorders, with a focus on ARFID, and an LLM-assisted protocol for early recognition and referral</em> (Version 0.9). TODO (DOI).</li>
+</ul>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>TODO (author).</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-apa2022dsm5tr" class="csl-entry" role="listitem">
+American Psychiatric Association. (2022). <em>Diagnostic and statistical manual of mental disorders</em> (5th, text rev.). American Psychiatric Association Publishing. <a href="https://doi.org/10.1176/appi.books.9780890425787">https://doi.org/10.1176/appi.books.9780890425787</a>
+</div>
+<div id="ref-bryantwaugh2022preliminary" class="csl-entry" role="listitem">
+Bryant-Waugh, R., Stern, C. M., Dreier, M. J., Micali, N., Cooke, L. J., Kuhnle, M. C., Burton Murray, H., Wang, S. B., Breithaupt, L., Becker, K. R., Misra, M., Lawson, E. A., Eddy, K. T., &amp; Thomas, J. J. (2022). Preliminary validation of the pica, <span>ARFID</span> and rumination disorder interview <span>ARFID</span> questionnaire (<span>PARDI-AR-Q</span>). <em>Journal of Eating Disorders</em>, <em>10</em>(1), 179. <a href="https://doi.org/10.1186/s40337-022-00706-7">https://doi.org/10.1186/s40337-022-00706-7</a>
+</div>
+<div id="ref-celik2026validity" class="csl-entry" role="listitem">
+Çelik, Y. S., Okumuş, H. G., Öksüzoğlu, M. E., Kaşak, M., Solgun, G., Bryant-Waugh, R., &amp; Öğütlü, H. (2026). Validity and reliability of the pica, <span>ARFID</span> and rumination disorder interview-<span>ARFID</span> questionnaire (<span>PARDI-AR-Q</span>) in <span>Turkish</span> adolescents. <em>Journal of Eating Disorders</em>, <em>14</em>(1). <a href="https://doi.org/10.1186/s40337-026-01585-y">https://doi.org/10.1186/s40337-026-01585-y</a>
+</div>
+<div id="ref-dane2023social" class="csl-entry" role="listitem">
+Dane, A., &amp; Bhatia, K. (2023). The social media diet: A scoping review to investigate the association between social media, body image and eating disorders amongst young people. <em>PLOS Global Public Health</em>, <em>3</em>(3), e0001091. <a href="https://doi.org/10.1371/journal.pgph.0001091">https://doi.org/10.1371/journal.pgph.0001091</a>
+</div>
+<div id="ref-eu2017mdr" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. (2017). <em>Regulation (<span>EU</span>) 2017/745 on medical devices</em>. Official Journal of the European Union, L 117, 5 May 2017. <a href="https://eur-lex.europa.eu/eli/reg/2017/745/oj">https://eur-lex.europa.eu/eli/reg/2017/745/oj</a>
+</div>
+<div id="ref-holland2016systematic" class="csl-entry" role="listitem">
+Holland, G., &amp; Tiggemann, M. (2016). A systematic review of the impact of the use of social networking sites on body image and disordered eating outcomes. <em>Body Image</em>, <em>17</em>, 100–110. <a href="https://doi.org/10.1016/j.bodyim.2016.02.008">https://doi.org/10.1016/j.bodyim.2016.02.008</a>
+</div>
+<div id="ref-zickgraf2018initial" class="csl-entry" role="listitem">
+Zickgraf, H. F., &amp; Ellis, J. M. (2018). Initial validation of the nine item avoidant/restrictive food intake disorder screen (<span>NIAS</span>): A measure of three restrictive eating patterns. <em>Appetite</em>, <em>123</em>, 32–42. <a href="https://doi.org/10.1016/j.appet.2017.11.111">https://doi.org/10.1016/j.appet.2017.11.111</a>
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<div class="rd-controls" role="toolbar" aria-label="Reading options">
+  <button type="button" data-theme="light" aria-pressed="false" aria-label="Light theme" title="Light theme">
+    <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+  </button>
+  <button type="button" data-theme="sepia" aria-pressed="false" aria-label="Sepia theme" title="Sepia theme">
+    <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5C5.5 4.5 8.5 4.5 12 6.5c3.5-2 6.5-2 9-1v13c-2.5-1-5.5-1-9 1-3.5-2-6.5-2-9-1z"></path><path d="M12 6.5v13"></path></svg>
+  </button>
+  <button type="button" data-theme="dark" aria-pressed="false" aria-label="Dark theme" title="Dark theme">
+    <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg>
+  </button>
+  <span class="rd-sep" aria-hidden="true"></span>
+  <button type="button" data-scale="-1" aria-label="Smaller text" title="Smaller text">A−</button>
+  <span class="rd-scale-out" aria-live="polite">100%</span>
+  <button type="button" data-scale="1" aria-label="Larger text" title="Larger text">A+</button>
+  <button type="button" data-scale="0" aria-label="Reset text size" title="Reset text size">
+    <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v4h4"></path></svg>
+  </button>
+</div>
+<script>
+(function () {
+  var root = document.documentElement;
+  var bar = document.querySelector('.rd-controls');
+  if (!bar) return;
+  var MIN = 0.85, MAX = 1.45, STEP = 0.075;
+  function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function currentScale() {
+    var v = parseFloat(getComputedStyle(root).getPropertyValue('--rd-scale'));
+    return isNaN(v) ? 1 : v;
+  }
+  function paint() {
+    var t = root.getAttribute('data-reading') || 'light';
+    bar.querySelectorAll('[data-theme]').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-theme') === t ? 'true' : 'false');
+    });
+    bar.querySelector('.rd-scale-out').textContent = Math.round(currentScale() * 100) + '%';
+  }
+  bar.addEventListener('click', function (ev) {
+    var b = ev.target.closest('button');
+    if (!b) return;
+    if (b.hasAttribute('data-theme')) {
+      var t = b.getAttribute('data-theme');
+      root.setAttribute('data-reading', t);
+      store('rd-theme', t);
+    } else if (b.hasAttribute('data-scale')) {
+      var d = parseInt(b.getAttribute('data-scale'), 10);
+      var s = d === 0 ? 1 : Math.min(MAX, Math.max(MIN, currentScale() + d * STEP));
+      s = Math.round(s * 1000) / 1000;
+      root.style.setProperty('--rd-scale', String(s));
+      store('rd-scale', String(s));
+    }
+    paint();
+  });
+  paint();
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./worried.html" class="pagination-link" aria-label="If you are worried · Si te preocupa">
+        <span class="nav-page-text">If you are worried · Si te preocupa</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Miguel Moreno Muñoz · Draft — not for citation</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This book does not provide diagnosis. If you are worried, see <a href="./worried.html">If you are worried</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
