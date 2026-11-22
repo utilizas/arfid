@@ -96,6 +96,7 @@ div.csl-indent {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap">
+<meta name="description" content="An evidence-graded open book on environmental factors in feeding and eating disorders, focused on ARFID, with an LLM-assisted protocol for early referral.">
 <meta name="theme-color" content="#1F5F74">
 <script>
 /* PNG favicons, resolved against Quarto's page offset so they work in sub-folders and offline. */
@@ -109,6 +110,9 @@ document.addEventListener('DOMContentLoaded', function () {
     l.rel = d[0]; l.type = d[1]; l.setAttribute('sizes', d[2]); l.href = off + 'assets/icons/' + d[3];
     document.head.appendChild(l);
   });
+  var mf = document.createElement('link');
+  mf.rel = 'manifest'; mf.href = off + 'assets/site.webmanifest';
+  document.head.appendChild(mf);
 });
 </script>
 <script>
@@ -123,8 +127,76 @@ document.addEventListener('DOMContentLoaded', function () {
   if (s >= 0.85 && s <= 1.45) root.style.setProperty('--rd-scale', String(s));
 })();
 </script>
+<!-- Bibliographic metadata for the book's landing page (index.qmd only).
+     Highwire Press tags are read by Google Scholar and reference managers (Zotero);
+     Dublin Core and schema.org JSON-LD are read by search engines and library harvesters. -->
+<meta name="keywords" content="avoidant/restrictive food intake disorder, ARFID, feeding and eating disorders, adolescence, environmental factors, social media, recommender systems, large language models, generative AI, early recognition, referral, screening, AI governance, body image">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<meta name="citation_title" content="Beyond Body Image: Environmental Factors in Feeding and Eating Disorders, with a Focus on ARFID, and an LLM-Assisted Protocol for Early Recognition and Referral">
+<meta name="citation_author" content="Moreno Muñoz, Miguel">
+<meta name="citation_author_institution" content="Universidad de Granada">
+<meta name="citation_author_orcid" content="https://orcid.org/0000-0002-0746-9587">
+<meta name="citation_publication_date" content="2026/11/22">
+<meta name="citation_doi" content="10.5281/zenodo.24436227">
+<meta name="citation_publisher" content="Zenodo">
+<meta name="citation_language" content="en">
+<meta name="citation_public_url" content="https://arfid26.vercel.app/">
+<meta name="DC.title" content="Beyond Body Image: Environmental Factors in Feeding and Eating Disorders, with a Focus on ARFID, and an LLM-Assisted Protocol for Early Recognition and Referral">
+<meta name="DC.creator" content="Moreno Muñoz, Miguel">
+<meta name="DC.date" content="2026-11-22">
+<meta name="DC.identifier" content="https://doi.org/10.5281/zenodo.24436227">
+<meta name="DC.language" content="en-GB">
+<meta name="DC.rights" content="CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Beyond Body Image",
+  "alternativeHeadline": "Environmental Factors in Feeding and Eating Disorders, with a Focus on ARFID, and an LLM-Assisted Protocol for Early Recognition and Referral",
+  "description": "An open, evidence-graded book on the environmental conditions in which feeding and eating disorders arise in adolescence, with a focus on avoidant/restrictive food intake disorder (ARFID), and a protocol in which a large language model helps adults organise what they have noticed and take it to the right professional.",
+  "author": {
+    "@type": "Person",
+    "name": "Miguel Moreno Muñoz",
+    "identifier": "https://orcid.org/0000-0002-0746-9587",
+    "sameAs": "https://orcid.org/0000-0002-0746-9587",
+    "affiliation": { "@type": "Organization", "name": "Universidad de Granada" }
+  },
+  "datePublished": "2026-11-22",
+  "version": "0.9",
+  "bookEdition": "Version 0.9 (pre-review edition)",
+  "bookFormat": "https://schema.org/EBook",
+  "inLanguage": "en-GB",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.24436227", "url": "https://doi.org/10.5281/zenodo.24436227" },
+  "url": "https://arfid26.vercel.app/",
+  "sameAs": [
+    "https://doi.org/10.5281/zenodo.24436227",
+    "https://utilizas.github.io/arfid/",
+    "https://arfid26.netlify.app/",
+    "https://arfid26.utilizas.workers.dev/"
+  ],
+  "image": "https://arfid26.vercel.app/assets/cover.png",
+  "keywords": "avoidant/restrictive food intake disorder; ARFID; feeding and eating disorders; adolescence; environmental factors; social media; recommender systems; large language models; generative AI; early recognition; referral; screening; AI governance; body image"
+}
+</script>
 
 
+<meta property="og:title" content="Beyond Body Image">
+<meta property="og:description" content="An evidence-graded open book on environmental factors in feeding and eating disorders, focused on ARFID, with an LLM-assisted protocol for early referral.">
+<meta property="og:image" content="https://arfid26.vercel.app/assets/social-card.png">
+<meta property="og:site_name" content="Beyond Body Image">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image:alt" content="Three open coloured arcs beside the title Beyond Body Image, by Miguel Moreno Muñoz.">
+<meta name="twitter:title" content="Beyond Body Image">
+<meta name="twitter:description" content="An evidence-graded open book on environmental factors in feeding and eating disorders, focused on ARFID, with an LLM-assisted protocol for early referral.">
+<meta name="twitter:image" content="https://arfid26.vercel.app/assets/social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:image:alt" content="Three open coloured arcs beside the title Beyond Body Image, by Miguel Moreno Muñoz.">
 <link rel="canonical" href="https://arfid26.vercel.app/">
 </head>
 
@@ -292,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/utilizas/arfid/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/utilizas/arfid/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/utilizas/arfid/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -450,19 +522,19 @@ Table&nbsp;1: Reading paths through the book
 </section>
 <section id="reproducibility-licence-and-citation" class="level2">
 <h2 class="anchored" data-anchor-id="reproducibility-licence-and-citation">Reproducibility, licence and citation</h2>
-<p>The book is written in Quarto and R. Its text, bibliography, figure and simulation code, toolkit and verification log are openly available, and each release is archived with a persistent identifier.</p>
+<p>The book is written in Quarto and R. Each release is archived with a persistent identifier, and the archive contains both the rendered edition and the source files: text, bibliography, figure and simulation code, toolkit and verification log.</p>
 <ul>
 <li>Canonical edition: <a href="https://arfid26.vercel.app/" class="uri">https://arfid26.vercel.app/</a></li>
 <li>Mirrors, serving the same build: <a href="https://utilizas.github.io/arfid/">GitHub Pages</a> · <a href="https://arfid26.netlify.app/">Netlify</a> · <a href="https://arfid26.utilizas.workers.dev">Cloudflare Workers</a></li>
-<li>Source repository: <a href="https://github.com/utilizas/arfid/" class="uri">https://github.com/utilizas/arfid/</a></li>
-<li>Archived release: <a href="https://doi.org/10.5281/zenodo.24436227">doi:10.5281/zenodo.24436227</a></li>
+<li>Repository of the rendered edition: <a href="https://github.com/utilizas/arfid/" class="uri">https://github.com/utilizas/arfid/</a></li>
+<li>Archived release, with source files: <a href="https://doi.org/10.5281/zenodo.24436227">doi:10.5281/zenodo.24436227</a></li>
 <li>Licence: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a>, which applies to the text, figures, code and toolkit.</li>
 </ul>
 <p>Please cite the archived release, or link to the canonical edition, rather than a mirror:</p>
 <blockquote class="blockquote">
 <p>Moreno Muñoz, M. (2026). <em>Beyond body image: Environmental factors in feeding and eating disorders, with a focus on ARFID, and an LLM-assisted protocol for early recognition and referral</em> (Version 0.9) [Computer software and online book]. Zenodo. <a href="https://doi.org/10.5281/zenodo.24436227" class="uri">https://doi.org/10.5281/zenodo.24436227</a></p>
 </blockquote>
-<p>Corrections and suggestions are welcome as issues in the source repository.</p>
+<p>Corrections and suggestions are welcome as issues in the GitHub repository.</p>
 </section>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
@@ -564,7 +636,7 @@ Zickgraf, H. F., &amp; Ellis, J. M. (2018). Initial validation of the nine item 
     anchorJS.add('.anchored');
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/arfid26\.vercel\.app\/");
+        var filterRegex = new RegExp("https:\/\/arfid26\.vercel\.app");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -908,7 +980,7 @@ Zickgraf, H. F., &amp; Ellis, J. M. (2018). Initial validation of the nine item 
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/utilizas/arfid/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/utilizas/arfid/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/utilizas/arfid/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book does not provide diagnosis. If you are worried, see <a href="./worried.html">If you are worried</a>.</p>
 </div>
