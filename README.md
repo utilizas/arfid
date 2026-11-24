@@ -2,7 +2,7 @@
 
 **Environmental Factors in Feeding and Eating Disorders, with a Focus on ARFID, and an LLM-Assisted Protocol for Early Recognition and Referral**
 
-Miguel Moreno Muñoz · Universidad de Granada · [ORCID 0000-0002-0746-9587](https://orcid.org/0000-0002-0746-9587)
+Miguel Moreno-Muñoz · Universidad de Granada · [ORCID 0000-0002-0746-9587](https://orcid.org/0000-0002-0746-9587)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24436227.svg)](https://doi.org/10.5281/zenodo.24436227)
 [![Licence: CC BY-NC-SA 4.0](https://img.shields.io/badge/licence-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -34,7 +34,8 @@ Please cite the archived release, or link to the canonical edition, rather than 
 
 ## Licence
 
-© 2026 Miguel Moreno Muñoz. Text, figures, code and toolkit are released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licence (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/), the same licence as the Zenodo record. The repository's licence field is empty because GitHub's licence picker does not offer this licence.
+© 2026 Miguel Moreno Muñoz.  
+Text, figures, code and toolkit are released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licence (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/), the same licence as the Zenodo record. The repository's licence field is empty because GitHub's licence picker does not offer this licence.
 
 ## Feedback
 
